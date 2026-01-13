@@ -22,7 +22,7 @@ export async function generateMetadata({
 
   return {
     title: `${project.title} — Patrick Marx`,
-    description: project.description,
+    description: project.shortDescription,
   };
 }
 
