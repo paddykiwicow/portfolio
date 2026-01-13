@@ -24,12 +24,12 @@ export default function LoginPage() {
       });
 
       if (response.ok) {
-        // Setze Cookie und leite zur Startseite um
-        document.cookie = 'portfolio-auth=true; path=/; max-age=86400'; // 24 Stunden
+        // Cookie wird serverseitig gesetzt, einfach weiterleiten
         router.push('/');
         router.refresh();
       } else {
-        setError('Falsches Passwort');
+        const data = await response.json();
+        setError(data.error || 'Falsches Passwort');
       }
     } catch (err) {
       setError('Ein Fehler ist aufgetreten');
