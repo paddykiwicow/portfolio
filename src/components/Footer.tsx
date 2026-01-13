@@ -1,6 +1,31 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function Footer() {
+  const [lastCommitDate, setLastCommitDate] = useState<string>('');
+
+  useEffect(() => {
+    // Lade Build-Info vom Client
+    fetch('/build-info.json')
+      .then(res => res.json())
+      .then(data => setLastCommitDate(data.lastCommitDateFormatted))
+      .catch(() => {
+        // Fallback
+        setLastCommitDate(
+          new Date().toLocaleDateString('de-DE', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZone: 'Europe/Berlin',
+          })
+        );
+      });
+  }, []);
+
   return (
     <footer className='mt-20 space-y-4 border-t border-stone-200 pt-8 text-sm dark:border-stone-800'>
       <div className='space-y-4'>
@@ -19,7 +44,7 @@ export default function Footer() {
           </Link>
         </nav>
 
-        <div className='space-y-2 text-stone-600 dark:text-stone-400'>
+        <div className='space-y-2 text-xs text-stone-500 dark:text-stone-500'>
           <p>
             Gebaut mit{' '}
             <a
@@ -80,15 +105,10 @@ export default function Footer() {
             </a>
             .
           </p>
-          <p>
-            Letzter Build:{' '}
-            {new Date().toLocaleDateString('de-DE', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}
-            .
-          </p>
+          <p>Keine Cookies oder Tracking-Tools verwendet :)</p>
+        </div>
+        <div className='font-mono text-xs text-stone-500 dark:text-stone-500'>
+          <p>Letzter Build: {lastCommitDate}.</p>
         </div>
       </div>
     </footer>
