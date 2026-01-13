@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import Footer from '@/components/Footer';
 import './globals.css';
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'Patrick Marx — Portfolio',
@@ -19,9 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.variable}>
-        <main className='mx-auto max-w-prose px-4 py-12 sm:px-6'>
+      <body>
+        <main className='mx-auto max-w-2xl px-4 py-10'>
           {children}
+          <Footer />
         </main>
       </body>
     </html>

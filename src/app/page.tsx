@@ -1,66 +1,52 @@
+import Header from '@/components/Header';
+import { getAllProjects } from '@/lib/projects';
+import { ArrowRightIcon } from '@heroicons/react/16/solid';
+import Image from 'next/image';
 import Link from 'next/link';
-import { projects } from '@/data/projects';
 
 export default function Home() {
-  const featured = projects.slice(0, 3);
+  const projects = getAllProjects();
   return (
-    <div className='space-y-16'>
-      <section>
-        <h1 className='text-3xl font-medium tracking-tight sm:text-4xl'>
-          Patrick Marx
-        </h1>
-        <p className='text-foreground/70 mt-2'>
-          Designer-developer hybrid. Focused on clean, resilient interfaces and
-          systems.
-        </p>
-      </section>
+    <div className='space-y-18'>
+      <Header />
 
-      <section>
-        <h2 className='text-foreground/50 text-sm tracking-widest uppercase'>
-          About
-        </h2>
-        <p className='text-foreground/80 mt-2'>
-          Ich baue minimalistische, zugängliche Web-Erlebnisse mit Next.js,
-          TypeScript und Tailwind. Interesse an Design-Systemen, Tokens und
-          Developer Experience.
-        </p>
-        <div className='mt-3'>
-          <Link
-            href='/about'
-            className='text-sm underline underline-offset-4 hover:opacity-80'
-          >
-            Mehr über mich
-          </Link>
-        </div>
-      </section>
-
-      <section>
-        <h2 className='text-foreground/50 text-sm tracking-widest uppercase'>
-          Works
-        </h2>
-        <ul className='divide-foreground/10 mt-2 divide-y'>
-          {featured.map(p => (
-            <li key={p.title} className='py-3'>
+      <section className='space-y-4'>
+        <h2 className='leading-tight font-medium'>Projekte</h2>
+        <ul>
+          {projects.map(p => (
+            <li key={p.title}>
               <Link
                 href={p.internalPath ?? '/portfolio'}
-                className='flex items-baseline justify-between gap-6 hover:opacity-90'
+                className='group -mx-3 flex items-center gap-4 rounded-lg p-3 transition-all hover:bg-stone-200/50'
               >
-                <span className='font-medium'>{p.title}</span>
-                <span className='text-foreground/60 hidden text-sm sm:inline'>
-                  {p.description}
-                </span>
+                {p.image && (
+                  <div className='relative w-28 flex-shrink-0'>
+                    {/* Bildgröße anpassen: w-24 = 96px, w-28 = 112px, w-32 = 128px, w-36 = 144px */}
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      width={0}
+                      height={0}
+                      sizes='112px'
+                      className='h-auto w-full rounded-md'
+                      style={{ objectFit: 'contain' }}
+                      unoptimized
+                    />
+                  </div>
+                )}
+                <div className='min-w-0 flex-1'>
+                  <h3 className='leading-tight font-medium'>{p.title}</h3>
+                  <p className='mt-1 text-sm text-stone-500'>{p.description}</p>
+                </div>
+                <div className='flex-shrink-0'>
+                  <div className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200 transition-all group-hover:translate-x-1 group-hover:bg-stone-300'>
+                    <ArrowRightIcon className='h-4 w-4' />
+                  </div>
+                </div>
               </Link>
             </li>
           ))}
         </ul>
-        <div className='mt-3'>
-          <Link
-            href='/portfolio'
-            className='text-sm underline underline-offset-4 hover:opacity-80'
-          >
-            Alle Projekte ansehen
-          </Link>
-        </div>
       </section>
     </div>
   );
