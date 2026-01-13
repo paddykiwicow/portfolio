@@ -12,6 +12,7 @@ try {
   const commitDate = new Date(lastCommitDate);
 
   // Erstelle ein JSON-Objekt mit der Commit-Zeit
+  // Zeitzone explizit auf Europe/Berlin setzen
   const buildInfo = {
     lastCommitDate: commitDate.toISOString(),
     lastCommitDateFormatted: commitDate.toLocaleDateString('de-DE', {
@@ -20,6 +21,7 @@ try {
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit',
+      timeZone: 'Europe/Berlin',
     }),
   };
 
@@ -43,6 +45,7 @@ try {
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit',
+      timeZone: 'Europe/Berlin',
     }),
   };
   const outputPath = path.join(process.cwd(), 'public', 'build-info.json');
