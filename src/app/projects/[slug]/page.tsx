@@ -2,9 +2,9 @@ import ProjectTemplate from '@/components/ProjectTemplate';
 import { getMinimalProjectBySlug } from '@/lib/projects';
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
