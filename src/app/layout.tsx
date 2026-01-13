@@ -1,5 +1,5 @@
+import ConditionalFooter from '@/components/ConditionalFooter';
 import type { Metadata } from 'next';
-import Footer from '@/components/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
       <body>
         <main className='mx-auto max-w-2xl px-4 py-10'>
           {children}
-          <Footer />
+          <ConditionalFooter />
         </main>
       </body>
     </html>

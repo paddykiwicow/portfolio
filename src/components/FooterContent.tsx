@@ -1,26 +1,30 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+'use client';
+
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
-function getLastCommitDate() {
-  try {
-    const buildInfoPath = join(process.cwd(), 'public', 'build-info.json');
-    const buildInfo = JSON.parse(readFileSync(buildInfoPath, 'utf-8'));
-    return buildInfo.lastCommitDateFormatted;
-  } catch {
-    // Fallback wenn Datei nicht existiert
-    return new Date().toLocaleDateString('de-DE', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-  }
-}
+export default function FooterContent() {
+  const [lastCommitDate, setLastCommitDate] = useState<string>('');
 
-export default function Footer() {
-  const lastCommitDate = getLastCommitDate();
+  useEffect(() => {
+    // Lade Build-Info vom Client
+    fetch('/build-info.json')
+      .then(res => res.json())
+      .then(data => setLastCommitDate(data.lastCommitDateFormatted))
+      .catch(() => {
+        // Fallback
+        setLastCommitDate(
+          new Date().toLocaleDateString('de-DE', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+          })
+        );
+      });
+  }, []);
+
   return (
     <footer className='mt-20 space-y-4 border-t border-stone-200 pt-8 text-sm'>
       <div className='space-y-4'>
