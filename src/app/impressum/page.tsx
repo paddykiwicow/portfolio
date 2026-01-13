@@ -37,15 +37,6 @@ export default function ImpressumPage() {
                 patrickmrx@icloud.com
               </a>
             </p>
-            <p className='mt-1 text-stone-500'>
-              Telefon:{' '}
-              <a
-                href='tel:+491785859301'
-                className='underline hover:text-stone-900'
-              >
-                +49 178 5859301
-              </a>
-            </p>
           </div>
 
           <div className='max-w-2xl'>

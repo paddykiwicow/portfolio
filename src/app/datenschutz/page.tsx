@@ -50,8 +50,6 @@ export default function DatenschutzPage() {
             </p>
             <div className='mt-2'>
               <p className='text-stone-500'>Patrick Marx</p>
-              <p className='mt-1 text-stone-500'>Pöttchewiesen 1</p>
-              <p className='text-stone-500'>30938 Burgwedel</p>
               <p className='mt-2 text-stone-500'>
                 E-Mail:{' '}
                 <a
@@ -60,6 +58,16 @@ export default function DatenschutzPage() {
                 >
                   patrickmrx@icloud.com
                 </a>
+              </p>
+              <p className='mt-2 text-stone-500'>
+                Weitere Angaben findest du im{' '}
+                <Link
+                  href='/impressum'
+                  className='underline hover:text-stone-900'
+                >
+                  Impressum
+                </Link>
+                .
               </p>
             </div>
           </div>
