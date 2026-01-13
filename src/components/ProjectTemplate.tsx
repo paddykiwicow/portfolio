@@ -148,19 +148,6 @@ export default function ProjectTemplate({
           {project.shortDescription && (
             <p className='mt-3 text-stone-500'>{project.shortDescription}</p>
           )}
-          {/* {project.date && <p className='mt-3'>{project.date}</p>} */}
-          {/* {project.badges && project.badges.length > 0 && (
-            <div className='mt-4 flex flex-wrap gap-2'>
-              {project.badges.map((badge, index) => (
-                <Badge
-                  key={index}
-                  className='rounded-lg border-0 bg-stone-200 font-normal text-stone-500'
-                >
-                  {badge}
-                </Badge>
-              ))}
-            </div>
-          )} */}
         </div>
         {firstVisual && (
           <div className='-mx-4 mt-6 sm:-mx-8 md:-mx-12 lg:-mx-16'>

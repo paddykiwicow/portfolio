@@ -38,7 +38,7 @@ export default function FooterContent() {
           </Link>
         </nav>
 
-        <div className='space-y-2 text-stone-600'>
+        <div className='space-y-2 text-xs text-stone-500'>
           <p>
             Gebaut mit{' '}
             <a
@@ -67,7 +67,16 @@ export default function FooterContent() {
             >
               Tailwind CSS
             </a>
-            . Schrift: Instrument Sans.
+            . Schrift:{' '}
+            <a
+              href='https://fonts.google.com/specimen/Instrument+Sans'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline'
+            >
+              Instrument Sans
+            </a>
+            .
           </p>
           <p>
             Entwickelt mit{' '}
@@ -99,7 +108,10 @@ export default function FooterContent() {
             </a>
             .
           </p>
-          <p>Letzter Build: {lastCommitDate}.</p>
+          <p>Keine Cookies oder Tracking-Tools verwendet :)</p>
+        </div>
+        <div className='text-xs text-stone-500'>
+          <p className='font-mono'>Letzter Build: {lastCommitDate}.</p>
         </div>
       </div>
     </footer>

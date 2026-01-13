@@ -7,8 +7,6 @@ export const metadata: Metadata = {
   description: 'Minimalistisches Portfolio mit Next.js und Tailwind',
   robots: 'noindex, nofollow',
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
     apple: '/images/avatar.webp',
   },
 };
