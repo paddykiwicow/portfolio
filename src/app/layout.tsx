@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: 'Patrick Marx — Portfolio',
   description: 'Minimalistisches Portfolio mit Next.js und Tailwind',
   robots: 'noindex, nofollow',
+  icons: {
+    icon: '/images/avatar.webp',
+    shortcut: '/images/avatar.webp',
+    apple: '/images/avatar.webp',
+  },
 };
 
 export default function RootLayout({
