@@ -5,6 +5,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Patrick Marx — Portfolio',
   description: 'Minimalistisches Portfolio mit Next.js und Tailwind',
+  robots: 'noindex, nofollow',
 };
 
 export default function RootLayout({
