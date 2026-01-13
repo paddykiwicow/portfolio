@@ -1,44 +1,25 @@
-'use client';
-
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
-export default function FooterContent() {
-  const [lastCommitDate, setLastCommitDate] = useState<string>('');
-
-  useEffect(() => {
-    // Lade Build-Info vom Client
-    fetch('/build-info.json')
-      .then(res => res.json())
-      .then(data => setLastCommitDate(data.lastCommitDateFormatted))
-      .catch(() => {
-        // Fallback
-        setLastCommitDate(
-          new Date().toLocaleDateString('de-DE', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            timeZone: 'Europe/Berlin',
-          })
-        );
-      });
-  }, []);
-
+export default function Footer() {
   return (
-    <footer className='mt-20 space-y-4 border-t border-stone-200 pt-8 text-sm'>
+    <footer className='mt-20 space-y-4 border-t border-stone-200 pt-8 text-sm dark:border-stone-800'>
       <div className='space-y-4'>
         <nav className='flex gap-4'>
-          <Link href='/impressum' className='text-stone-600 underline'>
+          <Link
+            href='/impressum'
+            className='text-stone-600 underline dark:text-stone-400'
+          >
             Impressum
           </Link>
-          <Link href='/datenschutz' className='text-stone-600 underline'>
+          <Link
+            href='/datenschutz'
+            className='text-stone-600 underline dark:text-stone-400'
+          >
             Datenschutz
           </Link>
         </nav>
 
-        <div className='space-y-2 text-xs text-stone-500'>
+        <div className='space-y-2 text-stone-600 dark:text-stone-400'>
           <p>
             Gebaut mit{' '}
             <a
@@ -67,16 +48,7 @@ export default function FooterContent() {
             >
               Tailwind CSS
             </a>
-            . Schrift:{' '}
-            <a
-              href='https://fonts.google.com/specimen/Instrument+Sans'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'
-            >
-              Instrument Sans
-            </a>
-            .
+            . Schrift: Instrument Sans.
           </p>
           <p>
             Entwickelt mit{' '}
@@ -108,10 +80,15 @@ export default function FooterContent() {
             </a>
             .
           </p>
-          <p>Keine Cookies oder Tracking-Tools verwendet :)</p>
-        </div>
-        <div className='text-xs text-stone-500'>
-          <p className='font-mono'>Letzter Build: {lastCommitDate}.</p>
+          <p>
+            Letzter Build:{' '}
+            {new Date().toLocaleDateString('de-DE', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+            .
+          </p>
         </div>
       </div>
     </footer>

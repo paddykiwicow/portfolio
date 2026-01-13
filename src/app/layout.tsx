@@ -1,5 +1,6 @@
-import ConditionalFooter from '@/components/ConditionalFooter';
 import type { Metadata } from 'next';
+import Footer from '@/components/Footer';
+import ThemeProvider from '@/components/ThemeProvider';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -17,11 +18,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='de'>
+    <html lang='de' suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (isDark) {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body>
+        <ThemeProvider />
         <main className='mx-auto max-w-2xl px-4 py-10'>
           {children}
-          <ConditionalFooter />
+          <Footer />
         </main>
       </body>
     </html>

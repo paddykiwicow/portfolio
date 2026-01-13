@@ -17,7 +17,7 @@ export default function Home() {
             <li key={p.title}>
               <Link
                 href={p.internalPath ?? '/portfolio'}
-                className='group -mx-3 flex items-center gap-4 rounded-lg p-3 transition-all hover:bg-stone-200/50'
+                className='group -mx-3 flex items-center gap-4 rounded-lg p-3 transition-all hover:bg-stone-200/50 dark:hover:bg-stone-800/50'
               >
                 {p.image && (
                   <div className='relative w-28 flex-shrink-0'>
@@ -36,10 +36,12 @@ export default function Home() {
                 )}
                 <div className='min-w-0 flex-1'>
                   <h3 className='leading-tight font-medium'>{p.title}</h3>
-                  <p className='mt-1 text-sm text-stone-500'>{p.description}</p>
+                  <p className='mt-1 text-sm text-stone-500 dark:text-stone-400'>
+                    {p.description}
+                  </p>
                 </div>
                 <div className='flex-shrink-0'>
-                  <div className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200 transition-all group-hover:translate-x-1 group-hover:bg-stone-300'>
+                  <div className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200 transition-all group-hover:translate-x-1 group-hover:bg-stone-300 dark:bg-stone-800 dark:group-hover:bg-stone-700'>
                     <ArrowRightIcon className='h-4 w-4' />
                   </div>
                 </div>

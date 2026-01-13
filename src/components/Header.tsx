@@ -44,7 +44,9 @@ export default function Header() {
         </div>
         <div>
           <h1 className='text-xl leading-tight font-medium'>Patrick Marx</h1>
-          <p className='text-stone-500'>Senior Product Designer</p>
+          <p className='text-stone-500 dark:text-stone-400'>
+            Senior Product Designer
+          </p>
         </div>
       </div>
 
@@ -69,10 +71,10 @@ export default function Header() {
       <nav className='flex flex-wrap gap-2'>
         <button
           onClick={() => copyToClipboard('patrickmrx@icloud.com', 'mail')}
-          className='relative inline-flex cursor-copy items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300'
+          className='relative inline-flex cursor-copy items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           <span>Mail</span>
-          <ClipboardDocumentListIcon className='h-4 w-4 flex-shrink-0 text-stone-500' />
+          <ClipboardDocumentListIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
           <AnimatePresence>
             {mailCopied && (
               <motion.span
@@ -80,7 +82,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 4, scale: 0.9 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100'
+                className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
               >
                 Kopiert!
               </motion.span>
@@ -89,10 +91,10 @@ export default function Header() {
         </button>
         <button
           onClick={() => copyToClipboard('+491785859301', 'phone')}
-          className='relative inline-flex cursor-copy items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300'
+          className='relative inline-flex cursor-copy items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           <span>Telefon</span>
-          <ClipboardDocumentListIcon className='h-4 w-4 flex-shrink-0 text-stone-500' />
+          <ClipboardDocumentListIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
           <AnimatePresence>
             {phoneCopied && (
               <motion.span
@@ -100,7 +102,7 @@ export default function Header() {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 4, scale: 0.9 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100'
+                className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
               >
                 Kopiert!
               </motion.span>
@@ -111,19 +113,19 @@ export default function Header() {
           href='/cv_patrick-marx.pdf'
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300'
+          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           <span>CV</span>
-          <DocumentArrowDownIcon className='h-4 w-4 flex-shrink-0 text-stone-500' />
+          <DocumentArrowDownIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
         </a>
         <a
           href='https://www.linkedin.com/in/patrickmrx/'
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300'
+          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           <span>LinkedIn</span>
-          <ArrowTopRightOnSquareIcon className='h-4 w-4 flex-shrink-0 text-stone-500' />
+          <ArrowTopRightOnSquareIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
         </a>
       </nav>
     </header>
