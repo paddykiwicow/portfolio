@@ -3,6 +3,7 @@
 import {
   ArrowTopRightOnSquareIcon,
   ClipboardDocumentListIcon,
+  DocumentArrowDownIcon,
 } from '@heroicons/react/16/solid';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
@@ -106,6 +107,15 @@ export default function Header() {
             )}
           </AnimatePresence>
         </button>
+        <a
+          href='/cv_patrick-marx.pdf'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300'
+        >
+          <span>CV</span>
+          <DocumentArrowDownIcon className='h-4 w-4 flex-shrink-0 text-stone-500' />
+        </a>
         <a
           href='https://www.linkedin.com/in/patrickmrx/'
           target='_blank'
