@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   description: 'Minimalistisches Portfolio mit Next.js und Tailwind',
   robots: 'noindex, nofollow',
   icons: {
-    icon: '/images/avatar.webp',
-    shortcut: '/images/avatar.webp',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
     apple: '/images/avatar.webp',
   },
 };
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='de'>
       <body>
         <main className='mx-auto max-w-2xl px-4 py-10'>
           {children}

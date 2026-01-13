@@ -10,9 +10,9 @@ export default function AboutPage() {
       <section>
         <h1>About</h1>
         <p className='mt-6 max-w-2xl'>
-          I'm a software engineer focused on building clean, accessible, and
-          performant web apps. I enjoy product thinking, design systems, and
-          developer experience.
+          Ich arbeite als Product Designer an digitalen Produkten, die über Zeit
+          wachsen und genutzt werden. Mich interessieren vor allem Struktur,
+          Verständlichkeit und der Umgang mit komplexen Systemen im Alltag.
         </p>
       </section>
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
             'TypeScript',
             'React',
             'Tailwind CSS',
-            'Node.js',
+            'Figma',
             'Design Systems',
           ].map(skill => (
             <Badge key={skill}>{skill}</Badge>

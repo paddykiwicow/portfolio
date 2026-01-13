@@ -26,7 +26,7 @@ export default function ImpressumPage() {
               Angaben gemäß § 5 TMG
             </h2>
             <p className='text-stone-500'>Patrick Marx</p>
-            <p className='mt-2 text-stone-500'>Pöttchewiesen 1</p>
+            <p className='mt-2 text-stone-500'>Pöttcherwiesen 1</p>
             <p className='text-stone-500'>30938 Burgwedel</p>
             <p className='mt-2 text-stone-500'>
               E-Mail:{' '}
