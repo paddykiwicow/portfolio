@@ -32,7 +32,8 @@ export default function Header() {
     <header className='space-y-6'>
       {/* Avatar + Name + Position */}
       <div className='flex items-center gap-4'>
-        <div className='relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full'>
+        {/* Avatar - currently hidden, remove 'hidden' class to show */}
+        <div className='relative hidden h-16 w-16 flex-shrink-0 overflow-hidden rounded-full'>
           <Image
             src='/images/avatar.webp'
             alt='Patrick Marx'
@@ -54,17 +55,18 @@ export default function Header() {
       {/* Intro Text */}
       <div className='space-y-3'>
         <p>
-          Ich arbeite als Product Designer an digitalen Produkten, die über Zeit
-          wachsen und genutzt werden. Mich interessieren vor allem{' '}
-          <span className='font-medium'>Struktur</span>,{' '}
-          <span className='font-medium'>Verständlichkeit</span> und der Umgang
-          mit <span className='font-medium'>komplexen Systemen</span> im Alltag.
+          Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu
+          durchdringen und aufzuräumen. Design Systems und Component Libraries
+          sind mein Steckenpferd – je nerdiger, desto besser.
         </p>
         <p>
-          Am liebsten arbeite ich{' '}
-          <span className='font-medium'>nah an der Entwicklung</span>. Ich
-          gestalte nicht nur Screens, sondern arbeite gemeinsam mit
-          Entwickler:innen an UI-Details und konkreten Lösungen.
+          Am meisten Energie gibt es mir, wenn ich nah mit Development
+          zusammenarbeite.{' '}
+          <span className='font-medium'>
+            Ich designe gerne in Figma, bin aber genauso gerne am Code.
+          </span>{' '}
+          Tagelange Design-Sessions sind mir zu zäh – ich gehe lieber früher ins
+          Prototyping und setze Ideen direkt in Production um.
         </p>
       </div>
 

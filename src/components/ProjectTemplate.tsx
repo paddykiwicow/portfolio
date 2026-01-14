@@ -165,14 +165,22 @@ export default function ProjectTemplate({
         )}
         {project.context && (
           <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic'>
+            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
               Kontext
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
-              {project.context}
-            </p>
+            {Array.isArray(project.context) ? (
+              <div className='space-y-4 text-stone-900 dark:text-stone-100'>
+                {project.context.map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+              </div>
+            ) : (
+              <p className='text-stone-900 dark:text-stone-100'>
+                {project.context}
+              </p>
+            )}
             {project.goal && (
-              <p className='mt-4 text-stone-500 dark:text-stone-400'>
+              <p className='mt-4 text-stone-900 dark:text-stone-100'>
                 <span className='font-medium text-stone-900 dark:text-stone-100'>
                   Das Ziel:
                 </span>{' '}
@@ -183,17 +191,17 @@ export default function ProjectTemplate({
         )}
         {project.role && (
           <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic'>
+            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
               Rolle
             </h2>
             {Array.isArray(project.role) ? (
-              <ul className='list-disc space-y-1 pl-6 text-stone-500 dark:text-stone-400'>
+              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
                 {project.role.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             ) : (
-              <ul className='list-disc space-y-1 pl-6 text-stone-500 dark:text-stone-400'>
+              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
                 <li>{project.role}</li>
               </ul>
             )}
@@ -201,17 +209,17 @@ export default function ProjectTemplate({
         )}
         {project.outcome && (
           <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-3 font-serif text-lg font-medium tracking-tight text-violet-600 italic'>
+            <h2 className='mb-3 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
               Outcome
             </h2>
             {Array.isArray(project.outcome) ? (
-              <ul className='list-disc space-y-1 pl-6 text-stone-500 dark:text-stone-400'>
+              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
                 {project.outcome.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             ) : (
-              <ul className='list-disc space-y-1 pl-6 text-stone-500 dark:text-stone-400'>
+              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
                 <li>{project.outcome}</li>
               </ul>
             )}
@@ -241,7 +249,7 @@ export default function ProjectTemplate({
         {previousProjectSlug ? (
           <Link
             href={`/projects/${previousProjectSlug}`}
-            className='flex h-8 items-center gap-2 rounded-full bg-stone-200 px-3 font-medium text-stone-900 transition-all hover:-translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+            className='flex items-center gap-2 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:-translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
           >
             <ArrowLeftIcon className='h-4 w-4' />
             <span>Vorheriges Projekt</span>
@@ -252,7 +260,7 @@ export default function ProjectTemplate({
         {nextProjectSlug && (
           <Link
             href={`/projects/${nextProjectSlug}`}
-            className='flex h-8 items-center gap-2 rounded-full bg-stone-200 px-3 font-medium text-stone-900 transition-all hover:translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+            className='flex items-center gap-2 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
           >
             <span>Nächstes Projekt</span>
             <ArrowRightIcon className='h-4 w-4' />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import ThemeProvider from '@/components/ThemeProvider';
+import BackgroundImage from '@/components/BackgroundImage';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -35,7 +36,8 @@ export default function RootLayout({
       </head>
       <body>
         <ThemeProvider />
-        <main className='mx-auto max-w-2xl px-4 py-10'>
+        <BackgroundImage />
+        <main className='relative z-10 mx-auto max-w-2xl px-4 py-10'>
           {children}
           <Footer />
         </main>

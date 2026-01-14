@@ -75,7 +75,7 @@ export default function LoginPage() {
           <button
             type='submit'
             disabled={isLoading}
-            className='inline-flex items-center justify-center rounded-full bg-stone-900 px-6 py-2 font-medium text-stone-100 transition-all hover:bg-stone-800 disabled:opacity-50 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200'
+            className='inline-flex items-center justify-center rounded-full bg-stone-900 px-4 py-2 font-medium text-stone-100 transition-all hover:bg-stone-800 disabled:opacity-50 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200'
           >
             {isLoading ? 'Wird geprüft...' : 'Anmelden'}
           </button>

@@ -5,21 +5,23 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     title: 'Berufsorientierungs-KI „Abby"',
     shortDescription: 'Eine persönliche Begleiterin für die Ausbildungssuche',
     slug: 'abby',
-    context:
-      'Abby ist eine KI-gestützte Begleiterin für Berufsorientierung auf Ausbildung.de. Im Rahmen eines einwöchigen Strategy- und Design-Sprints entstand eine Produktvision, die Berufsorientierung nicht als Suche, sondern als persönliche Begleitung versteht.',
-    goal: 'Eine überzeugende Vision zu entwickeln, die zeigt, wie KI Berufsorientierung personalisieren kann – ohne zu überfordern oder zu bevormunden.',
+    context: [
+      'Abby ist eine persönliche KI-Begleitung, die junge Menschen bei der Berufsorientierung auf Ausbildung.de unterstützt.',
+      'Sie ist rund ein Jahr vor ihrem geplanten Live-Gang in einem einwöchigen Design Sprint entstanden. Ausgangsfrage war, wie Berufsorientierung und Ausbildungssuche in Zukunft aussehen können. Mit dieser Frage ist ein cross-funktionales Team auf weißem Papier gestartet.',
+    ],
+    goal: 'Innerhalb einer Woche eine strategische Vision für die Zukunft von Ausbildung.de zu entwickeln.',
     role: [
-      'Mitentwicklung der Produktidee und inhaltlichen Ausrichtung von Abby',
-      'Übersetzung einer offenen KI-Idee in konkrete Nutzungsszenarien und visuelle Konzepte',
-      'Schneller Übergang von groben Ideen zu High-Fidelity-Mockups und klickbaren Prototypen',
-      'Visuelles Framing der Vision für Abstimmungen und Präsentationen',
-      'Gestaltung einer freundlichen, verständlichen Tonalität mit Fokus auf Vertrauen',
+      'Alleinverantwortlicher Designer im Projekt',
+      'Verantwortung für den gesamten Designprozess von Skizzen bis Figma-Prototypen',
+      'Entwicklung einer neuen, modernen Designsprache, die KI und die zukünftige Ausrichtung von Ausbildung.de visuell greifbar macht',
+      'Konzeption von Abby als ganzheitliche Begleitung über das gesamte Portal und mehrere Touchpoints hinweg',
+      'Vorbereitung und visuelle Ausarbeitung der Pitch-Präsentation gemeinsam mit CPO und Head of Product',
     ],
     outcome: [
-      'Entwicklung einer klaren Produktvision für KI-gestützte Berufsorientierung',
-      'Visuelle Grundlage, um ein komplexes und noch offenes Thema greifbar zu machen',
-      'Positionierung von Abby nicht als Chatbot, sondern als integrierte KI-Schicht',
-      'Basis für eine spätere Umsetzung und Weiterentwicklung Richtung Beta',
+      'Entwicklung einer klaren, greifbaren und zukunftsgerichteten Produktvision',
+      'Verankerung von Abby als strategischer Schwerpunkt in der Drei-Jahres-Strategie von Ausbildung.de',
+      'Übersetzung der Vision in zahlreiche Screens, Mockups und Präsentationen zur internen Verständigung',
+      'Leitidee, Screens und Prototypen als Grundlage für die später gestartete Produktentwicklung',
     ],
     visuals: [
       {
@@ -103,22 +105,25 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     title: 'Redesign des B2B-Portals',
     shortDescription: 'Modernisierung eines gewachsenen B2B-Systems',
     slug: 'dashboard-redesign',
-    context:
-      'Das B2B-Kundenportal von Ausbildung.de war über viele Jahre organisch gewachsen und entsprechend stark fragmentiert. Veraltete Seiten, eine inkonsistente Informationsarchitektur und fehlende Erweiterbarkeit machten Weiterentwicklung zunehmend schwierig – neue Features gingen im System unter oder waren technisch kaum noch sauber integrierbar.',
-    goal: 'Das Dashboard nicht als einmaliges Redesign behandeln, sondern als langfristig weiterentwickelbares System neu aufbauen.',
+    context: [
+      'Das B2B-Dashboard von Ausbildung.de war über Jahre kaum weiterentwickelt worden. Das letzte größere Update lag rund zehn Jahre zurück, das System war entsprechend geprägt von altem Branding, inkonsistentem Design, gewachsener Informationsarchitektur und vielen UX-Problemen.',
+      'Neue Features, Upselling oder nachhaltige Weiterentwicklung waren kaum möglich, weil Seiten überladen waren und es keine klaren Strukturen gab.',
+    ],
+    goal: 'Das Dashboard technisch und gestalterisch neu aufstellen, aufräumen und eine moderne, markenkonforme Grundlage für zukünftige Features und Upselling schaffen.',
     role: [
-      'Verantwortung für die visuelle und konzeptionelle Neuausrichtung des gesamten Dashboards',
-      'Definition einer neuen Design-Sprache als Grundlage für alle weiteren Seiten und Features',
-      'Neustrukturierung der Informationsarchitektur und vollständiger Neuaufbau zentraler Navigations- und Layoutkonzepte',
-      'Schrittweiser Ersatz von Legacy-Seiten durch neue, konsistente Interfaces unter laufendem Betrieb',
-      'Enge Zusammenarbeit mit Development bei der Entwicklung wiederverwendbarer Komponenten (Figma ↔ Storybook)',
+      'Alleinverantwortlicher Designer im cross-funktionalen Team',
+      'Visuelle Neuausrichtung und konzeptionelles Sparring mit Product',
+      'Aufbau einer neuen Designsprache und einer wiederverwendbaren Component Library als Grundlage für neue Seiten',
+      'Neustrukturierung der Informationsarchitektur inklusive zentraler Navigation',
+      'Gestaltung neuer Feature-, Upselling- und Verwaltungsseiten',
+      'Enge Zusammenarbeit mit Development, inkl. Mitarbeit am Code auf Komponentenebene',
     ],
     outcome: [
-      'Aufbau eines konsistenten, modularen B2B-Systems, das schrittweise erweitert werden kann',
-      'Deutlich verbesserte Nutzbarkeit komplexer Bereiche wie Stellenanlage, Vertrags- und Nutzerverwaltung',
-      'Reduzierter Erklär- und Supportaufwand für Customer Success durch klarere Strukturen und verlässliches Feedback',
-      'Spürbar schnellere Umsetzung neuer Features durch wiederverwendbare Komponenten und einheitliche Patterns',
-      'Wahrnehmbare Modernisierung des Produkts im direkten Vergleich zu Wettbewerbern',
+      'Aufbau eines modularen, erweiterbaren B2B-Systems',
+      'Schnellere Umsetzung neuer Features durch wiederverwendbare Komponenten',
+      'Spürbar bessere Nutzbarkeit zentraler Bereiche wie Stellen-, Vertrags- und Nutzerverwaltung',
+      'Weniger Supportaufwand durch klarere Strukturen und verlässliches Feedback',
+      'Sichtbare Modernisierung im Vergleich zu Wettbewerbern',
     ],
     visuals: [
       {
@@ -177,8 +182,10 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     shortDescription:
       'Visueller und struktureller Overhaul eines zentralen B2C-Flows',
     slug: 'direktbewerbung-redesign',
-    context:
-      'Die Direktbewerbung ist das zentrale Feature für Schüler:innen auf Ausbildung.de – und damit einer der wichtigsten Touchpoints der Plattform. Über Jahre war der Flow gewachsen, visuell und strukturell überholt und insbesondere mobil schwer nutzbar. Lange Formulare, wenig Guidance und viele Fehlermeldungen führten zu Frustration und Abbrüchen. Durch die Integration externer Bewerbersysteme entstand zusätzlich die Anforderung, komplexere Formularlogiken wie Conditional Questions abzubilden. Das war der konkrete Anlass, den Flow neu zu denken – und die Gelegenheit, die Experience insgesamt deutlich zu verbessern.',
+    context: [
+      'Die Direktbewerbung ist das zentrale Feature für Schüler:innen auf Ausbildung.de – und damit einer der wichtigsten Touchpoints der Plattform. Über Jahre war der Flow gewachsen, visuell und strukturell überholt und insbesondere mobil schwer nutzbar. Lange Formulare, wenig Guidance und viele Fehlermeldungen führten zu Frustration und Abbrüchen.',
+      'Durch die Integration externer Bewerbersysteme entstand zusätzlich die Anforderung, komplexere Formularlogiken wie Conditional Questions abzubilden. Das war der konkrete Anlass, den Flow neu zu denken – und die Gelegenheit, die Experience insgesamt deutlich zu verbessern.',
+    ],
     goal: 'Einen zentralen, überfrachteten Bewerbungsflow in eine klare, gut geführte und mobiletaugliche Experience zu überführen.',
     role: [
       'Visueller und konzeptioneller Overhaul der Direktbewerbung auf Schüler:innen-Seite',
@@ -189,7 +196,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       'Integration neuer funktionaler Anforderungen wie Conditional Questions in eine verständliche UX',
     ],
     outcome: [
-      'eutlich modernisierte, mobile-optimierte Bewerbung mit klarer Struktur und besserer Führung',
+      'Deutlich modernisierte, mobile-optimierte Bewerbung mit klarer Struktur und besserer Führung',
       'Reduzierte visuelle und kognitive Komplexität durch Abschnittslogik, Progress-Indikatoren und kontextuelle Hilfen',
       'Technische Grundlage, um komplexere Formularlogiken und zukünftige Anforderungen abzubilden',
       'Vorzeigeprojekt für eine zeitgemäße, nutzernahe Experience auf Ausbildung.de',
@@ -282,74 +289,73 @@ export const minimalProjects: MinimalProjectTemplate[] = [
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_0.png',
-          alt: 'Abby brand exploration (option 1)',
+          alt: 'Azubi-Magazin Exploration',
         },
-        subtitle: 'Abby brand exploration (option 1)',
         featured: true,
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_1.png',
-          alt: 'Apprentice magazine',
+          alt: 'Abby Brand Exploration (Option 1)',
         },
-        subtitle: 'Apprentice magazine',
+        subtitle: 'Abby Brand Exploration (Option 1)',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_2.png',
-          alt: 'Search filter variations',
+          alt: 'Abby Brand Exploration (Option 2)',
         },
-        subtitle: 'Search filter variations',
+        subtitle: 'Abby Brand Exploration (Option 2)',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_3.png',
-          alt: 'Abby brand exploration (option 2)',
+          alt: 'Banner für nicht internationale Besucher:innen',
         },
-        subtitle: 'Abby brand exploration (option 2)',
+        subtitle: 'Banner für nicht internationale Besucher:innen',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_4.png',
-          alt: 'Thumb voting feedback component',
+          alt: 'Dashboard-Komponenten Experimente',
         },
-        subtitle: 'Thumb voting feedback component',
+        subtitle: 'Dashboard-Komponenten Experimente',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_5.png',
-          alt: 'Dashboard component experiments',
+          alt: 'Suchfilter-Modernisierung',
         },
-        subtitle: 'Dashboard component experiments',
+        subtitle: 'Suchfilter-Modernisierung',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_6.png',
-          alt: 'International visitor banner',
+          alt: 'B2C Feedback-Komponente',
         },
-        subtitle: 'International visitor banner',
+        subtitle: 'B2C Feedback-Komponente',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_7.png',
-          alt: 'Resource download component',
+          alt: 'Download-Komponente Exploration',
         },
-        subtitle: 'Resource download component',
+        subtitle: 'Download-Komponente Exploration',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/design-explorations/design-explorations_8.png',
-          alt: 'AI-powered job description editor',
+          alt: 'KI-gestützter Stellenbeschreibungs-Editor',
         },
-        subtitle: 'AI-powered job description editor',
+        subtitle: 'KI-gestützter Stellenbeschreibungs-Editor',
       },
     ],
   },

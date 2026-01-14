@@ -113,7 +113,7 @@ export default function Lightbox({
               e.stopPropagation();
               onPrevious();
             }}
-            className='absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20'
+            className='absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20'
             aria-label='Previous image'
           >
             <svg
@@ -135,7 +135,7 @@ export default function Lightbox({
               e.stopPropagation();
               onNext();
             }}
-            className='absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer rounded-full bg-white/10 p-3 text-white transition-colors hover:bg-white/20'
+            className='absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20'
             aria-label='Next image'
           >
             <svg

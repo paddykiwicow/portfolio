@@ -73,19 +73,10 @@ export default function Footer() {
             >
               Tailwind CSS
             </a>
-            . Schrift: Instrument Sans.
+            . Typeface: Instrument.
           </p>
           <p>
-            Entwickelt mit{' '}
-            <a
-              href='https://cursor.sh'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='underline'
-            >
-              Cursor
-            </a>
-            . Designed in{' '}
+            Designed in{' '}
             <a
               href='https://figma.com'
               target='_blank'
@@ -94,7 +85,16 @@ export default function Footer() {
             >
               Figma
             </a>
-            . Gehostet auf{' '}
+            . Entwickelt mit{' '}
+            <a
+              href='https://cursor.sh'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline'
+            >
+              Cursor
+            </a>
+            . Gehosted auf{' '}
             <a
               href='https://vercel.com'
               target='_blank'
@@ -108,7 +108,7 @@ export default function Footer() {
           <p>Keine Cookies oder Tracking-Tools verwendet :)</p>
         </div>
         <div className='font-mono text-xs text-stone-500 dark:text-stone-500'>
-          <p>Letzter Build: {lastCommitDate}.</p>
+          <p>Letzte Änderung: {lastCommitDate}.</p>
         </div>
       </div>
     </footer>

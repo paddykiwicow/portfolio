@@ -75,8 +75,8 @@ export interface MinimalProjectTemplate {
   visuals: TemplateVisual[];
   /** URL slug for routing */
   slug: string;
-  /** Context text to display under the first image */
-  context?: string;
+  /** Context text to display under the first image (can be string or array of paragraphs) */
+  context?: string | string[];
   /** Goal text to display in the context section */
   goal?: string;
   /** Role items to display under the context section as bullet points (can be string or array) */
