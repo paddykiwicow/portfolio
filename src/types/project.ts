@@ -73,14 +73,8 @@ export interface MinimalProjectTemplate {
   shortDescription: string;
   /** Array of template visuals */
   visuals: TemplateVisual[];
-  /** Project completion date */
-  date?: string;
-  /** Company name */
-  company?: string;
   /** URL slug for routing */
   slug: string;
-  /** Custom badges/tags to display on the project page */
-  badges?: string[];
   /** Context text to display under the first image */
   context?: string;
   /** Goal text to display in the context section */

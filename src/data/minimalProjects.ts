@@ -4,12 +4,10 @@ export const minimalProjects: MinimalProjectTemplate[] = [
   {
     title: 'Berufsorientierungs-KI „Abby"',
     shortDescription: 'Eine persönliche Begleiterin für die Ausbildungssuche',
-    date: '2024',
-    company: 'Ausbildung.de',
     slug: 'abby',
-    badges: ['B2C', 'Produktvision', 'KI'],
     context:
       'Abby ist eine KI-gestützte Begleiterin für Berufsorientierung auf Ausbildung.de. Im Rahmen eines einwöchigen Strategy- und Design-Sprints entstand eine Produktvision, die Berufsorientierung nicht als Suche, sondern als persönliche Begleitung versteht.',
+    goal: 'Eine überzeugende Vision zu entwickeln, die zeigt, wie KI Berufsorientierung personalisieren kann – ohne zu überfordern oder zu bevormunden.',
     role: [
       'Mitentwicklung der Produktidee und inhaltlichen Ausrichtung von Abby',
       'Übersetzung einer offenen KI-Idee in konkrete Nutzungsszenarien und visuelle Konzepte',
@@ -17,7 +15,6 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       'Visuelles Framing der Vision für Abstimmungen und Präsentationen',
       'Gestaltung einer freundlichen, verständlichen Tonalität mit Fokus auf Vertrauen',
     ],
-    goal: 'Eine überzeugende Vision zu entwickeln, die zeigt, wie KI Berufsorientierung personalisieren kann – ohne zu überfordern oder zu bevormunden.',
     outcome: [
       'Entwicklung einer klaren Produktvision für KI-gestützte Berufsorientierung',
       'Visuelle Grundlage, um ein komplexes und noch offenes Thema greifbar zu machen',
@@ -38,79 +35,77 @@ export const minimalProjects: MinimalProjectTemplate[] = [
         type: 'image',
         data: {
           src: '/images/projects/abby/abby_2.png',
-          alt: 'Chat interaction flow',
+          alt: 'Card-basierte, interaktive Komponenten',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Card-basierte, interaktive Komponenten',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/abby/abby_3.png',
-          alt: 'Content components',
+          alt: 'Weitere card-basierte, interaktive Komponenten',
         },
-        subtitle: 'Content components',
+        subtitle: 'Weitere card-basierte, interaktive Komponenten',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/abby/abby_4.png',
-          alt: 'Content components',
+          alt: 'Geführte Chat-Interaktion',
         },
-        subtitle: 'Content components',
+        subtitle: 'Geführte Chat-Interaktion',
       },
       {
         type: 'video',
         data: {
           src: '/images/projects/abby/abby_5.mp4',
-          alt: 'Career quiz entry point prototype',
+          alt: 'Prototyp der Chat-Interaktion',
           poster: '/images/projects/abby/abby_5.jpg',
         },
-        subtitle: 'Career quiz entry point prototype',
+        subtitle: 'Prototyp der Chat-Interaktion',
       },
       {
         type: 'video',
         data: {
           src: '/images/projects/abby/abby_6.mp4',
-          alt: 'Career quiz entry point prototype',
+          alt: 'Einstieg in die Chat-Interaktion',
           poster: '/images/projects/abby/abby_6.jpg',
         },
-        subtitle: 'Career quiz entry point prototype',
+        subtitle: 'Einstieg in die Chat-Interaktion',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/abby/abby_7.png',
-          alt: 'Personal career dashboard',
+          alt: 'Chat- und Layout-Komponenten',
         },
-        subtitle: 'Personal career dashboard',
+        subtitle: 'Chat- und Layout-Komponenten',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/abby/abby_8.png',
-          alt: 'Abby AI Companion feature',
+          alt: 'Personalisierte Startseite',
         },
-        subtitle: 'Abby AI Companion feature',
+        subtitle: 'Personalisierte Startseite',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/abby/abby_9.png',
-          alt: 'Abby AI Companion feature',
+          alt: 'Landingpage für Unternehmen',
         },
-        subtitle: 'Abby AI Companion feature',
+        subtitle: 'Landingpage für Unternehmen',
       },
     ],
   },
   {
     title: 'Redesign des B2B-Portals',
     shortDescription: 'Modernisierung eines gewachsenen B2B-Systems',
-    date: '2024',
-    company: 'Ausbildung.de',
     slug: 'dashboard-redesign',
-    badges: ['B2C', 'Produktvision', 'KI'],
     context:
       'Das B2B-Kundenportal von Ausbildung.de war über viele Jahre organisch gewachsen und entsprechend stark fragmentiert. Veraltete Seiten, eine inkonsistente Informationsarchitektur und fehlende Erweiterbarkeit machten Weiterentwicklung zunehmend schwierig – neue Features gingen im System unter oder waren technisch kaum noch sauber integrierbar.',
+    goal: 'Das Dashboard nicht als einmaliges Redesign behandeln, sondern als langfristig weiterentwickelbares System neu aufbauen.',
     role: [
       'Verantwortung für die visuelle und konzeptionelle Neuausrichtung des gesamten Dashboards',
       'Definition einer neuen Design-Sprache als Grundlage für alle weiteren Seiten und Features',
@@ -118,7 +113,6 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       'Schrittweiser Ersatz von Legacy-Seiten durch neue, konsistente Interfaces unter laufendem Betrieb',
       'Enge Zusammenarbeit mit Development bei der Entwicklung wiederverwendbarer Komponenten (Figma ↔ Storybook)',
     ],
-    goal: 'Das Dashboard nicht als einmaliges Redesign behandeln, sondern als langfristig weiterentwickelbares System neu aufbauen.',
     outcome: [
       'Aufbau eines konsistenten, modularen B2B-Systems, das schrittweise erweitert werden kann',
       'Deutlich verbesserte Nutzbarkeit komplexer Bereiche wie Stellenanlage, Vertrags- und Nutzerverwaltung',
@@ -179,112 +173,110 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     ],
   },
   {
-    title: 'Direktbewerbung',
-    shortDescription: 'Eine persönliche Begleiterin für die Ausbildungssuche',
-    date: '2024',
-    company: 'Ausbildung.de',
+    title: 'Direktbewerbung Redesign',
+    shortDescription:
+      'Visueller und struktureller Overhaul eines zentralen B2C-Flows',
     slug: 'direktbewerbung-redesign',
-    badges: ['B2C', 'Produktvision', 'KI'],
     context:
-      'Abby ist eine KI-gestützte Begleiterin für Berufsorientierung auf Ausbildung.de. Im Rahmen eines einwöchigen Strategy- und Design-Sprints entstand eine Produktvision, die Berufsorientierung nicht als Suche, sondern als persönliche Begleitung versteht.',
+      'Die Direktbewerbung ist das zentrale Feature für Schüler:innen auf Ausbildung.de – und damit einer der wichtigsten Touchpoints der Plattform. Über Jahre war der Flow gewachsen, visuell und strukturell überholt und insbesondere mobil schwer nutzbar. Lange Formulare, wenig Guidance und viele Fehlermeldungen führten zu Frustration und Abbrüchen. Durch die Integration externer Bewerbersysteme entstand zusätzlich die Anforderung, komplexere Formularlogiken wie Conditional Questions abzubilden. Das war der konkrete Anlass, den Flow neu zu denken – und die Gelegenheit, die Experience insgesamt deutlich zu verbessern.',
+    goal: 'Einen zentralen, überfrachteten Bewerbungsflow in eine klare, gut geführte und mobiletaugliche Experience zu überführen.',
     role: [
-      'Mitentwicklung der Produktidee und inhaltlichen Ausrichtung von Abby',
-      'Übersetzung einer offenen KI-Idee in konkrete Nutzungsszenarien und visuelle Konzepte',
-      'Schneller Übergang von groben Ideen zu High-Fidelity-Mockups und klickbaren Prototypen',
-      'Visuelles Framing der Vision für Abstimmungen und Präsentationen',
-      'Gestaltung einer freundlichen, verständlichen Tonalität mit Fokus auf Vertrauen',
+      'Visueller und konzeptioneller Overhaul der Direktbewerbung auf Schüler:innen-Seite',
+      'Neustrukturierung des Formulars mit Fokus auf mobile Nutzung und klare Führung',
+      'Entwicklung einer app-nahen Experience mit schrittweisem Aufbau, Progress-Anzeige und kontextueller Orientierung',
+      'Einführung einer konsistenten Design-Sprache und grundlegender UI-Komponenten für das Frontend',
+      'Enge Zusammenarbeit mit Product und Development während Konzeption und Umsetzung',
+      'Integration neuer funktionaler Anforderungen wie Conditional Questions in eine verständliche UX',
     ],
-    goal: 'Eine überzeugende Vision zu entwickeln, die zeigt, wie KI Berufsorientierung personalisieren kann – ohne zu überfordern oder zu bevormunden.',
     outcome: [
-      'Entwicklung einer klaren Produktvision für KI-gestützte Berufsorientierung',
-      'Visuelle Grundlage, um ein komplexes und noch offenes Thema greifbar zu machen',
-      'Positionierung von Abby nicht als Chatbot, sondern als integrierte KI-Schicht',
-      'Basis für eine spätere Umsetzung und Weiterentwicklung Richtung Beta',
+      'eutlich modernisierte, mobile-optimierte Bewerbung mit klarer Struktur und besserer Führung',
+      'Reduzierte visuelle und kognitive Komplexität durch Abschnittslogik, Progress-Indikatoren und kontextuelle Hilfen',
+      'Technische Grundlage, um komplexere Formularlogiken und zukünftige Anforderungen abzubilden',
+      'Vorzeigeprojekt für eine zeitgemäße, nutzernahe Experience auf Ausbildung.de',
+      'Basis für spätere Optimierungen in Richtung Conversion und Abbruchreduktion',
     ],
     visuals: [
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_0.png',
-          alt: 'Chat interaction flow',
+          alt: 'Vorher und Nachher der Startseite',
         },
-        subtitle: 'Chat interaction flow',
         featured: true,
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_1.png',
-          alt: 'Chat interaction flow',
+          alt: 'Vorher und Nachher der Startseite',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Vorher und Nachher der Startseite',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_2.png',
-          alt: 'Chat interaction flow',
+          alt: 'Fortschrittsanzeige mit Feedback pro Abschnitt',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Fortschrittsanzeige mit Feedback pro Abschnitt',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_3.png',
-          alt: 'Chat interaction flow',
+          alt: 'Neue Conditional-Komponente',
         },
-        subtitle: 'jens',
+        subtitle: 'Neue Conditional-Komponente',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_4.png',
-          alt: 'Chat interaction flow',
+          alt: 'Eingabe des Geburtsdatums',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Eingabe des Geburtsdatums',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_5.png',
-          alt: 'Chat interaction flow',
+          alt: 'Detailansicht der Abschnitte',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Detailansicht der Abschnitte',
       },
       {
         type: 'video',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_6.mp4',
-          alt: 'Career quiz entry point prototype',
+          alt: 'Prototyp des Zusammenspiels von Formular und Header',
           poster: '/images/projects/abby/abby_5.jpg',
         },
-        subtitle: 'Career quiz entry point prototype',
+        subtitle: 'Prototyp des Zusammenspiels von Formular und Header',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_7.png',
-          alt: 'Chat interaction flow',
+          alt: 'Neu gestaltete Komponenten',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Neu gestaltete Komponenten',
       },
       {
         type: 'image',
         data: {
           src: '/images/projects/mobile-apply/mobile-apply_8.png',
-          alt: 'Chat interaction flow',
+          alt: 'Abschicken der Bewerbung',
         },
-        subtitle: 'Chat interaction flow',
+        subtitle: 'Abschicken der Bewerbung',
       },
     ],
   },
   {
-    title: 'Design Explorations at Ausbildung.de',
-    shortDescription:
-      'Explorations and experiments that push our product design forward beyond shipped features.',
-    date: '2022 - 2025',
-    company: 'Ausbildung.de',
+    title: 'Design Explorations',
+    shortDescription: 'Arbeiten aus dem Produktalltag bei Ausbildung.de',
     slug: 'design-explorations',
+    context:
+      'Unterschiedliche Designarbeiten aus mehreren Jahren bei Ausbildung.de – von mobilen, app-nahen Interfaces im B2C-Portal über Component Libraries im B2B-Dashboard bis hin zu explorativen Brand- und UI-Studien.',
     visuals: [
       {
         type: 'image',
@@ -298,16 +290,15 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_2.png',
+          src: '/images/projects/design-explorations/design-explorations_1.png',
           alt: 'Apprentice magazine',
         },
         subtitle: 'Apprentice magazine',
-        featured: true,
       },
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_3.png',
+          src: '/images/projects/design-explorations/design-explorations_2.png',
           alt: 'Search filter variations',
         },
         subtitle: 'Search filter variations',
@@ -315,7 +306,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_4.png',
+          src: '/images/projects/design-explorations/design-explorations_3.png',
           alt: 'Abby brand exploration (option 2)',
         },
         subtitle: 'Abby brand exploration (option 2)',
@@ -323,7 +314,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_5.png',
+          src: '/images/projects/design-explorations/design-explorations_4.png',
           alt: 'Thumb voting feedback component',
         },
         subtitle: 'Thumb voting feedback component',
@@ -331,7 +322,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_6.png',
+          src: '/images/projects/design-explorations/design-explorations_5.png',
           alt: 'Dashboard component experiments',
         },
         subtitle: 'Dashboard component experiments',
@@ -339,7 +330,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_7.png',
+          src: '/images/projects/design-explorations/design-explorations_6.png',
           alt: 'International visitor banner',
         },
         subtitle: 'International visitor banner',
@@ -347,7 +338,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_8.png',
+          src: '/images/projects/design-explorations/design-explorations_7.png',
           alt: 'Resource download component',
         },
         subtitle: 'Resource download component',
@@ -355,7 +346,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
       {
         type: 'image',
         data: {
-          src: '/images/projects/design-explorations/design-explorations_9.png',
+          src: '/images/projects/design-explorations/design-explorations_8.png',
           alt: 'AI-powered job description editor',
         },
         subtitle: 'AI-powered job description editor',

@@ -21,7 +21,6 @@ export function convertToProject(
     image: featuredImage,
     tech: [], // We'll add tech tags later if needed
     tag: 'design', // Default tag, can be customized per project
-    date: minimalProject.date,
   };
 }
 

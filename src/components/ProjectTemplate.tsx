@@ -39,6 +39,7 @@ function VisualRenderer({
           height={0}
           sizes='(max-width: 768px) 100vw, 768px'
           className={`h-auto w-full ${isHeader ? 'md:rounded-xl' : 'rounded-xl'}`}
+          unoptimized
         />
       );
       break;
@@ -164,7 +165,7 @@ export default function ProjectTemplate({
         )}
         {project.context && (
           <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
+            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic'>
               Kontext
             </h2>
             <p className='text-stone-500 dark:text-stone-400'>
@@ -182,7 +183,7 @@ export default function ProjectTemplate({
         )}
         {project.role && (
           <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
+            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic'>
               Rolle
             </h2>
             {Array.isArray(project.role) ? (
@@ -200,7 +201,7 @@ export default function ProjectTemplate({
         )}
         {project.outcome && (
           <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-3 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
+            <h2 className='mb-3 font-serif text-lg font-medium tracking-tight text-violet-600 italic'>
               Outcome
             </h2>
             {Array.isArray(project.outcome) ? (

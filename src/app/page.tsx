@@ -11,7 +11,9 @@ export default function Home() {
       <Header />
 
       <section className='space-y-4'>
-        <h2 className='leading-tight font-medium'>Projekte</h2>
+        <h2 className='font-serif text-lg leading-tight font-medium text-violet-600 italic'>
+          Projekte
+        </h2>
         <ul>
           {projects.map(p => (
             <li key={p.title}>

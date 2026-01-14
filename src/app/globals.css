@@ -1,8 +1,9 @@
 @import 'tailwindcss';
-@import '@fontsource/instrument-sans/400.css';
-@import '@fontsource/instrument-sans/500.css';
-@import '@fontsource/instrument-sans/600.css';
-@import '@fontsource/instrument-sans/700.css';
+@import '@fontsource/instrument-sans/latin-400.css';
+@import '@fontsource/instrument-sans/latin-500.css';
+@import '@fontsource/instrument-sans/latin-600.css';
+@import '@fontsource/instrument-sans/latin-700.css';
+@import '@fontsource/instrument-serif/latin-400-italic.css';
 
 @layer base {
   html {
@@ -11,5 +12,11 @@
   body {
     @apply bg-stone-100 text-stone-900 dark:bg-stone-900 dark:text-stone-100;
     font-family: 'Instrument Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Instrument Serif', serif;
   }
 }
