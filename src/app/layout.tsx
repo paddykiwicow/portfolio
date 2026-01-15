@@ -7,10 +7,13 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Patrick Marx — Portfolio',
-  description: 'Minimalistisches Portfolio mit Next.js und Tailwind',
+  description:
+    'Senior Product Designer. Design Systems, Component Libraries und enge Zusammenarbeit mit Development.',
   robots: 'noindex, nofollow',
   icons: {
+    icon: '/images/avatar.webp',
     apple: '/images/avatar.webp',
+    shortcut: '/images/avatar.webp',
   },
   viewport: {
     width: 'device-width',
@@ -22,6 +25,30 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: 'default',
   },
+  openGraph: {
+    title: 'Patrick Marx — Portfolio',
+    description:
+      'Senior Product Designer. Design Systems, Component Libraries und enge Zusammenarbeit mit Development.',
+    url: 'https://patrickmarx.design',
+    siteName: 'Patrick Marx',
+    images: [
+      {
+        url: '/images/avatar.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Patrick Marx',
+      },
+    ],
+    locale: 'de_DE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Patrick Marx — Portfolio',
+    description:
+      'Senior Product Designer. Design Systems, Component Libraries und enge Zusammenarbeit mit Development.',
+    images: ['/images/avatar.webp'],
+  },
 };
 
 export default function RootLayout({
@@ -32,6 +59,8 @@ export default function RootLayout({
   return (
     <html lang='de' suppressHydrationWarning>
       <head>
+        <link rel='icon' href='/images/avatar.webp' type='image/webp' />
+        <link rel='apple-touch-icon' href='/images/avatar.webp' />
         <script
           dangerouslySetInnerHTML={{
             __html: `
