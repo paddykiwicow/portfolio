@@ -100,6 +100,41 @@ export const minimalProjects: MinimalProjectTemplate[] = [
         subtitle: 'Landingpage für Unternehmen',
       },
     ],
+    translations: {
+      en: {
+        title: 'Career Guidance AI "Abby"',
+        shortDescription: 'A personal companion for apprenticeship search',
+        context: [
+          'Abby is a personal AI companion that supports young people in career guidance on Ausbildung.de.',
+          'She was created about a year before her planned launch in a one-week design sprint. The starting question was how career guidance and apprenticeship search could look like in the future. With this question, a cross-functional team started on a blank sheet of paper.',
+        ],
+        goal: 'To develop a strategic vision for the future of Ausbildung.de within one week.',
+        role: [
+          'Sole responsible designer in the project',
+          'Responsibility for the entire design process from sketches to Figma prototypes',
+          'Development of a new design language for the visual translation of AI and the future of Ausbildung.de',
+          'Conceptualization of Abby as a holistic companion across multiple touchpoints',
+          'Preparation and visual elaboration of the pitch presentation with CPO and Head of Product',
+        ],
+        outcome: [
+          'Development of a clear, tangible and future-oriented product vision',
+          'Establishment of Abby as a strategic focus in the three-year strategy of Ausbildung.de',
+          'Translation of the vision into numerous screens, mockups and presentations for internal understanding',
+          'Core idea, screens and prototypes as basis for the later started product development',
+        ],
+        visuals: [
+          { subtitle: 'Chat interaction flow' },
+          { subtitle: 'Card-based, interactive components' },
+          { subtitle: 'More card-based, interactive components' },
+          { subtitle: 'Guided chat interaction' },
+          { subtitle: 'Prototype of the chat interaction' },
+          { subtitle: 'Entry into the chat interaction' },
+          { subtitle: 'Chat and layout components' },
+          { subtitle: 'Personalized homepage' },
+          { subtitle: 'Landing page for companies' },
+        ],
+      },
+    },
   },
   {
     title: 'Redesign des B2B-Portals',
@@ -175,6 +210,39 @@ export const minimalProjects: MinimalProjectTemplate[] = [
         subtitle: 'Stellen-Editor',
       },
     ],
+    translations: {
+      en: {
+        title: 'B2B Portal Redesign',
+        shortDescription: 'Modernization of a grown B2B system',
+        context: [
+          'The B2B dashboard of Ausbildung.de had barely been further developed over the years. The last major update was about ten years ago, the system was accordingly characterized by old branding, inconsistent design, grown information architecture and many UX problems.',
+          'New features, upselling or sustainable further development were hardly possible because pages were overloaded and there were no clear structures.',
+        ],
+        goal: 'To reposition the dashboard technically and design-wise, clean it up and create a modern, brand-compliant foundation for future features and upselling.',
+        role: [
+          'Sole responsible designer in the project',
+          'Visual repositioning and conceptual sparring with Product Management',
+          'Building a new design language and a reusable Component Library',
+          'Restructuring the information architecture including central navigation',
+          'Close collaboration with Development, including work on code at component level',
+        ],
+        outcome: [
+          'Building a modular, extensible B2B system',
+          'Faster implementation of new features through reusable components',
+          'Noticeably better usability of central areas such as job, contract and user management',
+          'Less support effort through clearer structures and reliable feedback',
+          'Visible modernization compared to competitors',
+        ],
+        visuals: [
+          { subtitle: 'Contract management' },
+          { subtitle: 'Contract and product overview' },
+          { subtitle: 'User administration and roles' },
+          { subtitle: 'Homepage with newsfeed' },
+          { subtitle: 'Application form editor' },
+          { subtitle: 'Job editor' },
+        ],
+      },
+    },
   },
   {
     title: 'Direktbewerbung Redesign',
@@ -274,6 +342,42 @@ export const minimalProjects: MinimalProjectTemplate[] = [
         subtitle: 'Abschicken der Bewerbung',
       },
     ],
+    translations: {
+      en: {
+        title: 'Direct Application Redesign',
+        shortDescription:
+          'Visual and structural overhaul of a central application flow',
+        context: [
+          'The direct application is the central feature for students on Ausbildung.de. At the same time, the experience had grown over the years, was visually outdated and problematic from a UX perspective.',
+          'Long forms, missing guidance and many error messages led to frustration and dropouts. With the integration of Kombo, there was also the requirement to map more complex form logics such as Conditional Questions.',
+        ],
+        goal: 'To integrate new functional requirements and reposition the direct application visually and structurally.',
+        role: [
+          'Sole responsible designer in the project',
+          'Redesign of the direct application from structure and flow to high-fidelity mockups',
+          'Translation of new functional requirements into understandable user guidance',
+          'Development of a clearly guided, mobile experience',
+          'Close collaboration with Product and Development during implementation',
+        ],
+        outcome: [
+          'Completely revised direct application with clear structure and consistent design language',
+          'Introduction of Conditional Questions as basis for future requirements',
+          'Reduced complexity of long forms through better guidance and section logic',
+          'Visual showcase project for a contemporary application on Ausbildung.de',
+        ],
+        visuals: [
+          { subtitle: 'Before and after of the homepage' },
+          { subtitle: 'Before and after of the homepage' },
+          { subtitle: 'Progress indicator with feedback per section' },
+          { subtitle: 'New conditional component' },
+          { subtitle: 'Date of birth input' },
+          { subtitle: 'Detail view of sections' },
+          { subtitle: 'Prototype of the interaction between form and header' },
+          { subtitle: 'Newly designed components' },
+          { subtitle: 'Submitting the application' },
+        ],
+      },
+    },
   },
   {
     title: 'Design Explorations',
@@ -355,5 +459,24 @@ export const minimalProjects: MinimalProjectTemplate[] = [
         subtitle: 'KI-gestützter Stellenbeschreibungs-Editor',
       },
     ],
+    translations: {
+      en: {
+        title: 'Design Explorations',
+        shortDescription: 'Work from everyday product life at Ausbildung.de',
+        context:
+          'Various works and experiments from several years at Ausbildung.de, from mobile, app-like interfaces in the B2C portal to Component Libraries in the B2B dashboard to exploratory brand and UI work.',
+        visuals: [
+          { subtitle: 'Azubi Magazine Exploration' },
+          { subtitle: 'Abby Brand Exploration (Option 1)' },
+          { subtitle: 'Abby Brand Exploration (Option 2)' },
+          { subtitle: 'Banner for non-international visitors' },
+          { subtitle: 'Dashboard component experiments' },
+          { subtitle: 'Search filter modernization' },
+          { subtitle: 'B2C feedback component' },
+          { subtitle: 'Download component exploration' },
+          { subtitle: 'AI-supported job description editor' },
+        ],
+      },
+    },
   },
 ];

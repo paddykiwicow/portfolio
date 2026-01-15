@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function BackgroundImage() {
   return (
     <div
-      className='pointer-events-none fixed inset-x-0 z-0 block h-[250px] overflow-hidden dark:hidden'
+      className='pointer-events-none fixed inset-x-0 top-0 z-0 block h-[250px] overflow-hidden dark:hidden'
       style={{ top: 'env(safe-area-inset-top, 0px)' }}
     >
       <div className='relative h-full w-full'>

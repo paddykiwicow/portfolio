@@ -1,5 +1,8 @@
 'use client';
 
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/lib/i18n';
+import { getTranslatedProject } from '@/lib/projectTranslations';
 import { getNextProjectSlug, getPreviousProjectSlug } from '@/lib/projects';
 import type { MinimalProjectTemplate, TemplateVisual } from '@/types/project';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/16/solid';
@@ -92,6 +95,9 @@ export default function ProjectTemplate({
   project,
   currentSlug,
 }: ProjectTemplateProps) {
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
+  const translatedProject = getTranslatedProject(project, language);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -108,8 +114,8 @@ export default function ProjectTemplate({
   const nextProjectSlug = getNextProjectSlug(currentSlug);
   const previousProjectSlug = getPreviousProjectSlug(currentSlug);
 
-  const firstVisual = project.visuals[0];
-  const remainingVisuals = project.visuals.slice(1);
+  const firstVisual = translatedProject.visuals[0];
+  const remainingVisuals = translatedProject.visuals.slice(1);
 
   const openLightbox = (index: number) => {
     if (!isDesktop) return;
@@ -133,24 +139,46 @@ export default function ProjectTemplate({
 
   return (
     <article className='space-y-20'>
-      <div>
+      <div className='flex items-start justify-between'>
         <Link
           href='/'
           className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200 transition-all hover:-translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700'
-          aria-label='Back home'
+          aria-label={t.project.backHome}
         >
           <ArrowLeftIcon className='h-4 w-4 text-stone-900 dark:text-stone-100' />
         </Link>
+        <div className='flex gap-1'>
+          <button
+            onClick={() => setLanguage('de')}
+            className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
+              language === 'de'
+                ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
+                : 'bg-stone-200 text-stone-600 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-400 dark:hover:bg-stone-700'
+            }`}
+          >
+            DE
+          </button>
+          <button
+            onClick={() => setLanguage('en')}
+            className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
+              language === 'en'
+                ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
+                : 'bg-stone-200 text-stone-600 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-400 dark:hover:bg-stone-700'
+            }`}
+          >
+            EN
+          </button>
+        </div>
       </div>
 
       <section>
         <div>
           <h1 className='text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100'>
-            {project.title}
+            {translatedProject.title}
           </h1>
-          {project.shortDescription && (
+          {translatedProject.shortDescription && (
             <p className='mt-3 text-stone-500 dark:text-stone-400'>
-              {project.shortDescription}
+              {translatedProject.shortDescription}
             </p>
           )}
         </div>
@@ -163,64 +191,64 @@ export default function ProjectTemplate({
             />
           </div>
         )}
-        {project.context && (
+        {translatedProject.context && (
           <div className='mt-8 max-w-2xl'>
             <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
-              Kontext
+              {t.project.context}
             </h2>
-            {Array.isArray(project.context) ? (
+            {Array.isArray(translatedProject.context) ? (
               <div className='space-y-4 text-stone-900 dark:text-stone-100'>
-                {project.context.map((paragraph, index) => (
+                {translatedProject.context.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
             ) : (
               <p className='text-stone-900 dark:text-stone-100'>
-                {project.context}
+                {translatedProject.context}
               </p>
             )}
-            {project.goal && (
+            {translatedProject.goal && (
               <p className='mt-4 text-stone-900 dark:text-stone-100'>
                 <span className='font-medium text-stone-900 dark:text-stone-100'>
-                  Das Ziel:
+                  {t.project.goal}
                 </span>{' '}
-                {project.goal}
+                {translatedProject.goal}
               </p>
             )}
           </div>
         )}
-        {project.role && (
+        {translatedProject.role && (
           <div className='mt-8 max-w-2xl'>
             <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
-              Rolle
+              {t.project.role}
             </h2>
-            {Array.isArray(project.role) ? (
+            {Array.isArray(translatedProject.role) ? (
               <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                {project.role.map((item, index) => (
+                {translatedProject.role.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             ) : (
               <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                <li>{project.role}</li>
+                <li>{translatedProject.role}</li>
               </ul>
             )}
           </div>
         )}
-        {project.outcome && (
+        {translatedProject.outcome && (
           <div className='mt-8 max-w-2xl'>
             <h2 className='mb-3 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
-              Outcome
+              {t.project.outcome}
             </h2>
-            {Array.isArray(project.outcome) ? (
+            {Array.isArray(translatedProject.outcome) ? (
               <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                {project.outcome.map((item, index) => (
+                {translatedProject.outcome.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             ) : (
               <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                <li>{project.outcome}</li>
+                <li>{translatedProject.outcome}</li>
               </ul>
             )}
           </div>
@@ -252,7 +280,7 @@ export default function ProjectTemplate({
             className='flex items-center gap-2 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:-translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
           >
             <ArrowLeftIcon className='h-4 w-4' />
-            <span>Vorheriges Projekt</span>
+            <span>{t.project.previousProject}</span>
           </Link>
         ) : (
           <div></div>
@@ -262,7 +290,7 @@ export default function ProjectTemplate({
             href={`/projects/${nextProjectSlug}`}
             className='flex items-center gap-2 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
           >
-            <span>Nächstes Projekt</span>
+            <span>{t.project.nextProject}</span>
             <ArrowRightIcon className='h-4 w-4' />
           </Link>
         )}

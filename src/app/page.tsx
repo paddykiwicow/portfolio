@@ -1,12 +1,31 @@
+'use client';
+
 import Header from '@/components/Header';
 import BackgroundImage from '@/components/BackgroundImage';
-import { getAllProjects } from '@/lib/projects';
+import { minimalProjects } from '@/data/minimalProjects';
+import { getTranslatedProject } from '@/lib/projectTranslations';
 import { ArrowRightIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { translations } from '@/lib/i18n';
 
 export default function Home() {
-  const projects = getAllProjects();
+  const { language } = useLanguage();
+  const t = translations[language];
+  const projects = minimalProjects.map(p => {
+    const translated = getTranslatedProject(p, language);
+    const featuredVisual = translated.visuals.find(v => v.featured);
+    const firstImageVisual = translated.visuals.find(v => v.type === 'image');
+    const featuredImage =
+      featuredVisual?.data.src || firstImageVisual?.data.src;
+    return {
+      title: translated.title,
+      description: translated.shortDescription,
+      internalPath: `/projects/${translated.slug}`,
+      image: featuredImage,
+    };
+  });
   return (
     <div className='relative'>
       <BackgroundImage />
@@ -15,7 +34,7 @@ export default function Home() {
 
         <section className='space-y-4'>
           <h2 className='font-serif text-lg leading-tight font-medium text-violet-600 italic dark:text-violet-400'>
-            Projekte
+            {t.home.projects}
           </h2>
           <ul>
             {projects.map(p => (

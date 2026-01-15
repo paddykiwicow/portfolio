@@ -83,4 +83,21 @@ export interface MinimalProjectTemplate {
   role?: string | string[];
   /** Outcome items to display under the role section as bullet points (can be string or array) */
   outcome?: string | string[];
+  /** Translations for title, descriptions, and all text content */
+  translations?: {
+    en?: {
+      title?: string;
+      shortDescription?: string;
+      context?: string | string[];
+      goal?: string;
+      role?: string | string[];
+      outcome?: string | string[];
+      visuals?: Array<{
+        subtitle?: string;
+        data?: {
+          alt?: string;
+        };
+      }>;
+    };
+  };
 }

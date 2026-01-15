@@ -1,0 +1,439 @@
+export type Language = 'de' | 'en';
+
+type Translations = {
+  de: {
+    header: {
+      position: string;
+      intro1: string;
+      intro2: string;
+      mail: string;
+      telefon: string;
+      copied: string;
+    };
+    home: {
+      projects: string;
+    };
+    login: {
+      password: string;
+      login: string;
+      checking: string;
+      wrongPassword: string;
+      error: string;
+    };
+    project: {
+      context: string;
+      role: string;
+      outcome: string;
+      goal: string;
+      previousProject: string;
+      nextProject: string;
+      backHome: string;
+    };
+    footer: {
+      builtWith: string;
+      and: string;
+      typeface: string;
+      designedIn: string;
+      developedWith: string;
+      hostedOn: string;
+      noCookies: string;
+      lastChange: string;
+      impressum: string;
+      datenschutz: string;
+    };
+    impressum: {
+      title: string;
+      backToHome: string;
+      tmgTitle: string;
+      responsibleTitle: string;
+      email: string;
+    };
+    datenschutz: {
+      title: string;
+      backToHome: string;
+      section1Title: string;
+      section1Text1: string;
+      section1Text2: string;
+      section1Text3: string;
+      section2Title: string;
+      section2Text: string;
+      section2MoreInfo: string;
+      section3Title: string;
+      section3Text1: string;
+      section3Text2: string;
+      section3List1: string;
+      section3List2: string;
+      section3List3: string;
+      section3List4: string;
+      section3List5: string;
+      section3Text3: string;
+      section3Text4: string;
+      section3Text5: string;
+      section3Text6: string;
+      section3Link: string;
+      section4Title: string;
+      section4Text1: string;
+      section4Text2: string;
+      section5Title: string;
+      section5Text1: string;
+      section5Text2: string;
+      section6Title: string;
+      section6Text1: string;
+      section6Text2: string;
+      section7Title: string;
+      section7Text1: string;
+      section7Text2: string;
+      section8Title: string;
+      section8Text1: string;
+      section8Text2: string;
+      section9Title: string;
+      section9Text1: string;
+      section9List1: string;
+      section9List2: string;
+      section9List3: string;
+      section9List4: string;
+      section9List5: string;
+      section9List6: string;
+      section9Text2: string;
+      section10Title: string;
+      section10Text: string;
+    };
+  };
+  en: {
+    header: {
+      position: string;
+      intro1: string;
+      intro2: string;
+      mail: string;
+      telefon: string;
+      copied: string;
+    };
+    home: {
+      projects: string;
+    };
+    login: {
+      password: string;
+      login: string;
+      checking: string;
+      wrongPassword: string;
+      error: string;
+    };
+    project: {
+      context: string;
+      role: string;
+      outcome: string;
+      goal: string;
+      previousProject: string;
+      nextProject: string;
+      backHome: string;
+    };
+    footer: {
+      builtWith: string;
+      and: string;
+      typeface: string;
+      designedIn: string;
+      developedWith: string;
+      hostedOn: string;
+      noCookies: string;
+      lastChange: string;
+      impressum: string;
+      datenschutz: string;
+    };
+    impressum: {
+      title: string;
+      backToHome: string;
+      tmgTitle: string;
+      responsibleTitle: string;
+      email: string;
+    };
+    datenschutz: {
+      title: string;
+      backToHome: string;
+      section1Title: string;
+      section1Text1: string;
+      section1Text2: string;
+      section1Text3: string;
+      section2Title: string;
+      section2Text: string;
+      section2MoreInfo: string;
+      section3Title: string;
+      section3Text1: string;
+      section3Text2: string;
+      section3List1: string;
+      section3List2: string;
+      section3List3: string;
+      section3List4: string;
+      section3List5: string;
+      section3Text3: string;
+      section3Text4: string;
+      section3Text5: string;
+      section3Text6: string;
+      section3Link: string;
+      section4Title: string;
+      section4Text1: string;
+      section4Text2: string;
+      section5Title: string;
+      section5Text1: string;
+      section5Text2: string;
+      section6Title: string;
+      section6Text1: string;
+      section6Text2: string;
+      section7Title: string;
+      section7Text1: string;
+      section7Text2: string;
+      section8Title: string;
+      section8Text1: string;
+      section8Text2: string;
+      section9Title: string;
+      section9Text1: string;
+      section9List1: string;
+      section9List2: string;
+      section9List3: string;
+      section9List4: string;
+      section9List5: string;
+      section9List6: string;
+      section9Text2: string;
+      section10Title: string;
+      section10Text: string;
+    };
+  };
+};
+
+export const translations: Translations = {
+  de: {
+    header: {
+      position: 'Senior Product Designer',
+      intro1:
+        'Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu durchdringen und aufzuräumen. Design Systems und Component Libraries sind mein Steckenpferd – je nerdiger, desto besser.',
+      intro2:
+        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite. Ich designe gerne in Figma, bin aber genauso gerne am Code. Tagelange Design-Sessions sind mir zu zäh – ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
+      mail: 'Mail',
+      telefon: 'Telefon',
+      copied: 'Kopiert!',
+    },
+    home: {
+      projects: 'Projekte',
+    },
+    login: {
+      password: 'Passwort',
+      login: 'Anmelden',
+      checking: 'Wird geprüft...',
+      wrongPassword: 'Falsches Passwort',
+      error: 'Ein Fehler ist aufgetreten',
+    },
+    project: {
+      context: 'Kontext',
+      role: 'Rolle',
+      outcome: 'Outcome',
+      goal: 'Das Ziel:',
+      previousProject: 'Vorheriges Projekt',
+      nextProject: 'Nächstes Projekt',
+      backHome: 'Zurück zur Startseite',
+    },
+    footer: {
+      builtWith: 'Gebaut mit',
+      and: 'und',
+      typeface: 'Typeface: Instrument.',
+      designedIn: 'Designed in',
+      developedWith: 'Entwickelt mit',
+      hostedOn: 'Gehosted auf',
+      noCookies: 'Keine Cookies oder Tracking-Tools verwendet :)',
+      lastChange: 'Letzte Änderung:',
+      impressum: 'Impressum',
+      datenschutz: 'Datenschutz',
+    },
+    impressum: {
+      title: 'Impressum',
+      backToHome: 'Zurück zur Startseite',
+      tmgTitle: 'Angaben gemäß § 5 TMG',
+      responsibleTitle: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV',
+      email: 'E-Mail:',
+    },
+    datenschutz: {
+      title: 'Datenschutzerklärung',
+      backToHome: 'Zurück zur Startseite',
+      section1Title: '1. Allgemeine Hinweise',
+      section1Text1:
+        'Der Schutz deiner personenbezogenen Daten ist mir wichtig.',
+      section1Text2:
+        'Diese Datenschutzerklärung informiert darüber, welche personenbezogenen Daten beim Besuch dieser Website verarbeitet werden und zu welchem Zweck.',
+      section1Text3:
+        'Personenbezogene Daten sind alle Daten, mit denen du persönlich identifiziert werden kannst.',
+      section2Title: '2. Verantwortlicher',
+      section2Text:
+        'Verantwortlich für die Datenverarbeitung auf dieser Website ist:',
+      section2MoreInfo: 'Weitere Angaben findest du im',
+      section3Title: '3. Hosting',
+      section3Text1:
+        'Diese Website wird bei Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA, gehostet.',
+      section3Text2:
+        'Beim Aufruf der Website verarbeitet Vercel automatisch sogenannte Server-Logfiles. Dabei können insbesondere folgende Daten erhoben werden:',
+      section3List1: 'IP-Adresse',
+      section3List2: 'Datum und Uhrzeit des Zugriffs',
+      section3List3: 'Browsertyp und Betriebssystem',
+      section3List4: 'Referrer-URL',
+      section3List5: 'Hostname',
+      section3Text3:
+        'Die Verarbeitung dieser Daten erfolgt zur technischen Bereitstellung der Website sowie zur Gewährleistung von Sicherheit und Stabilität.',
+      section3Text4:
+        'Die Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).',
+      section3Text5:
+        'Vercel verarbeitet Daten auch in den USA. Zur Absicherung des Datenschutzniveaus verwendet Vercel Standardvertragsklauseln gemäß Art. 46 DSGVO.',
+      section3Text6: 'Weitere Informationen findest du in der',
+      section3Link: 'Datenschutzerklärung von Vercel',
+      section4Title: '4. Cookies',
+      section4Text1: 'Diese Website verwendet keine Cookies.',
+      section4Text2:
+        'Es werden weder Tracking- noch Marketing- oder Analyse-Cookies eingesetzt.',
+      section5Title: '5. Tracking und Analyse',
+      section5Text1:
+        'Auf dieser Website werden keine Tracking- oder Analyse-Tools eingesetzt.',
+      section5Text2:
+        'Insbesondere kommen keine Dienste wie Google Analytics, Facebook Pixel oder vergleichbare Technologien zum Einsatz.',
+      section6Title: '6. Externe Links',
+      section6Text1:
+        'Diese Website enthält Links zu externen Websites Dritter (z. B. LinkedIn).',
+      section6Text2:
+        'Beim Anklicken eines externen Links verlässt du diese Website. Für die Inhalte und die Datenverarbeitung auf externen Seiten ist ausschließlich der jeweilige Anbieter verantwortlich.',
+      section7Title: '7. Schriftarten',
+      section7Text1:
+        'Die auf dieser Website verwendeten Schriftarten werden lokal gehostet.',
+      section7Text2:
+        'Es erfolgt keine Verbindung zu externen Font-Anbietern wie Google Fonts.',
+      section8Title: '8. Kontaktaufnahme',
+      section8Text1:
+        'Wenn du mich per E-Mail oder Telefon kontaktierst, werden die von dir übermittelten Daten ausschließlich zur Bearbeitung deiner Anfrage verwendet.',
+      section8Text2:
+        'Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Kommunikation).',
+      section9Title: '9. Rechte der betroffenen Personen',
+      section9Text1: 'Du hast jederzeit das Recht:',
+      section9List1:
+        'Auskunft über deine gespeicherten personenbezogenen Daten zu erhalten',
+      section9List2: 'Berichtigung unrichtiger Daten zu verlangen',
+      section9List3: 'die Löschung deiner Daten zu verlangen',
+      section9List4: 'die Einschränkung der Verarbeitung zu verlangen',
+      section9List5: 'der Verarbeitung zu widersprechen',
+      section9List6: 'deine Daten in einem übertragbaren Format zu erhalten',
+      section9Text2:
+        'Außerdem hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren.',
+      section10Title: '10. Änderungen dieser Datenschutzerklärung',
+      section10Text:
+        'Ich behalte mir vor, diese Datenschutzerklärung anzupassen, wenn sich die Website oder rechtliche Anforderungen ändern.',
+    },
+  },
+  en: {
+    header: {
+      position: 'Senior Product Designer',
+      intro1:
+        'I love sitting in front of complex, grown systems, diving deep into everything and cleaning it up. Design Systems and Component Libraries are my thing – the nerdier, the better.',
+      intro2:
+        "I get the most energy when I work closely with Development. I like designing in Figma, but I'm just as happy working with code. Days-long design sessions are too tedious for me – I prefer going earlier into prototyping and implementing ideas directly into production.",
+      mail: 'Mail',
+      telefon: 'Phone',
+      copied: 'Copied!',
+    },
+    home: {
+      projects: 'Projects',
+    },
+    login: {
+      password: 'Password',
+      login: 'Login',
+      checking: 'Checking...',
+      wrongPassword: 'Wrong password',
+      error: 'An error occurred',
+    },
+    project: {
+      context: 'Context',
+      role: 'Role',
+      outcome: 'Outcome',
+      goal: 'The Goal:',
+      previousProject: 'Previous Project',
+      nextProject: 'Next Project',
+      backHome: 'Back to homepage',
+    },
+    footer: {
+      builtWith: 'Built with',
+      and: 'and',
+      typeface: 'Typeface: Instrument.',
+      designedIn: 'Designed in',
+      developedWith: 'Developed with',
+      hostedOn: 'Hosted on',
+      noCookies: 'No cookies or tracking tools used :)',
+      lastChange: 'Last change:',
+      impressum: 'Imprint',
+      datenschutz: 'Privacy Policy',
+    },
+    impressum: {
+      title: 'Imprint',
+      backToHome: 'Back to homepage',
+      tmgTitle: 'Information according to § 5 TMG',
+      responsibleTitle: 'Responsible for content according to § 55 Abs. 2 RStV',
+      email: 'Email:',
+    },
+    datenschutz: {
+      title: 'Privacy Policy',
+      backToHome: 'Back to homepage',
+      section1Title: '1. General Information',
+      section1Text1: 'The protection of your personal data is important to me.',
+      section1Text2:
+        'This privacy policy informs about which personal data is processed when visiting this website and for what purpose.',
+      section1Text3:
+        'Personal data is all data with which you can be personally identified.',
+      section2Title: '2. Responsible Party',
+      section2Text: 'Responsible for data processing on this website is:',
+      section2MoreInfo: 'Further information can be found in the',
+      section3Title: '3. Hosting',
+      section3Text1:
+        'This website is hosted by Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.',
+      section3Text2:
+        'When accessing the website, Vercel automatically processes so-called server log files. The following data can be collected:',
+      section3List1: 'IP address',
+      section3List2: 'Date and time of access',
+      section3List3: 'Browser type and operating system',
+      section3List4: 'Referrer URL',
+      section3List5: 'Hostname',
+      section3Text3:
+        'The processing of this data is for the technical provision of the website as well as to ensure security and stability.',
+      section3Text4:
+        'The legal basis for this processing is Art. 6 para. 1 lit. f GDPR (legitimate interest).',
+      section3Text5:
+        'Vercel also processes data in the USA. To secure the data protection level, Vercel uses standard contractual clauses according to Art. 46 GDPR.',
+      section3Text6: 'Further information can be found in the',
+      section3Link: 'Privacy Policy of Vercel',
+      section4Title: '4. Cookies',
+      section4Text1: 'This website does not use cookies.',
+      section4Text2: 'No tracking, marketing or analytics cookies are used.',
+      section5Title: '5. Tracking and Analytics',
+      section5Text1: 'No tracking or analytics tools are used on this website.',
+      section5Text2:
+        'In particular, no services like Google Analytics, Facebook Pixel or comparable technologies are used.',
+      section6Title: '6. External Links',
+      section6Text1:
+        'This website contains links to external websites of third parties (e.g. LinkedIn).',
+      section6Text2:
+        'When clicking on an external link, you leave this website. The respective provider is solely responsible for the content and data processing on external pages.',
+      section7Title: '7. Fonts',
+      section7Text1: 'The fonts used on this website are hosted locally.',
+      section7Text2:
+        'No connection to external font providers like Google Fonts is made.',
+      section8Title: '8. Contact',
+      section8Text1:
+        'If you contact me by email or phone, the data you provide will be used solely to process your request.',
+      section8Text2:
+        'The processing of this data is based on Art. 6 para. 1 lit. b GDPR (pre-contractual measures) or Art. 6 para. 1 lit. f GDPR (legitimate interest in communication).',
+      section9Title: '9. Rights of Data Subjects',
+      section9Text1: 'You have the right at any time:',
+      section9List1: 'To receive information about your stored personal data',
+      section9List2: 'To request correction of incorrect data',
+      section9List3: 'To request deletion of your data',
+      section9List4: 'To request restriction of processing',
+      section9List5: 'To object to processing',
+      section9List6: 'To receive your data in a transferable format',
+      section9Text2:
+        'You also have the right to complain to a data protection supervisory authority.',
+      section10Title: '10. Changes to this Privacy Policy',
+      section10Text:
+        'I reserve the right to adjust this privacy policy if the website or legal requirements change.',
+    },
+  },
+};
