@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     'Senior Product Designer. Design Systems, Component Libraries und enge Zusammenarbeit mit Development.',
   robots: 'noindex, nofollow',
   icons: {
-    icon: '/images/avatar.webp',
-    apple: '/images/avatar.webp',
-    shortcut: '/images/avatar.webp',
+    icon: '/icon.png',
+    apple: '/apple-icon.png',
+    shortcut: '/icon.png',
   },
   viewport: {
     width: 'device-width',
@@ -59,8 +59,8 @@ export default function RootLayout({
   return (
     <html lang='de' suppressHydrationWarning>
       <head>
-        <link rel='icon' href='/images/avatar.webp' type='image/webp' />
-        <link rel='apple-touch-icon' href='/images/avatar.webp' />
+        <link rel='icon' href='/icon.png' type='image/png' />
+        <link rel='apple-touch-icon' href='/apple-icon.png' />
         <script
           dangerouslySetInnerHTML={{
             __html: `
