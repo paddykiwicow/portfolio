@@ -52,13 +52,13 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section1Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section1Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section1Text2}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section1Text3}
             </p>
           </div>
@@ -67,12 +67,12 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section2Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section2Text}
             </p>
             <div className='mt-2'>
-              <p className='text-stone-500 dark:text-stone-400'>Patrick Marx</p>
-              <p className='mt-2 text-stone-500 dark:text-stone-400'>
+              <p className='text-stone-900 dark:text-stone-100'>Patrick Marx</p>
+              <p className='mt-2 text-stone-900 dark:text-stone-100'>
                 {t.impressum.email}{' '}
                 <a
                   href='mailto:patrickmrx@icloud.com'
@@ -81,7 +81,7 @@ export default function DatenschutzPage() {
                   patrickmrx@icloud.com
                 </a>
               </p>
-              <p className='mt-2 text-stone-500 dark:text-stone-400'>
+              <p className='mt-2 text-stone-900 dark:text-stone-100'>
                 {t.datenschutz.section2MoreInfo}{' '}
                 <Link
                   href='/impressum'
@@ -98,29 +98,29 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Text2}
             </p>
-            <ul className='mt-2 ml-4 list-disc space-y-1 text-stone-500 dark:text-stone-400'>
+            <ul className='mt-2 ml-4 list-disc space-y-1 text-stone-900 dark:text-stone-100'>
               <li>{t.datenschutz.section3List1}</li>
               <li>{t.datenschutz.section3List2}</li>
               <li>{t.datenschutz.section3List3}</li>
               <li>{t.datenschutz.section3List4}</li>
               <li>{t.datenschutz.section3List5}</li>
             </ul>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Text3}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Text4}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Text5}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section3Text6}{' '}
               <a
                 href='https://vercel.com/legal/privacy-policy'
@@ -138,10 +138,10 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section4Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section4Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section4Text2}
             </p>
           </div>
@@ -150,10 +150,10 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section5Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section5Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section5Text2}
             </p>
           </div>
@@ -162,10 +162,10 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section6Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section6Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section6Text2}
             </p>
           </div>
@@ -174,10 +174,10 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section7Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section7Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section7Text2}
             </p>
           </div>
@@ -186,10 +186,10 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section8Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section8Text1}
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section8Text2}
             </p>
           </div>
@@ -198,10 +198,10 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section9Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section9Text1}
             </p>
-            <ul className='mt-2 ml-4 list-disc space-y-1 text-stone-500 dark:text-stone-400'>
+            <ul className='mt-2 ml-4 list-disc space-y-1 text-stone-900 dark:text-stone-100'>
               <li>{t.datenschutz.section9List1}</li>
               <li>{t.datenschutz.section9List2}</li>
               <li>{t.datenschutz.section9List3}</li>
@@ -209,7 +209,7 @@ export default function DatenschutzPage() {
               <li>{t.datenschutz.section9List5}</li>
               <li>{t.datenschutz.section9List6}</li>
             </ul>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section9Text2}
             </p>
           </div>
@@ -218,7 +218,7 @@ export default function DatenschutzPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section10Title}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section10Text}
             </p>
           </div>

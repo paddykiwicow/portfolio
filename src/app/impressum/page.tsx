@@ -52,14 +52,14 @@ export default function ImpressumPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.impressum.tmgTitle}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>Patrick Marx</p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>Patrick Marx</p>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               Pöttcherwiesen 1
             </p>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900 dark:text-stone-100'>
               30938 Burgwedel
             </p>
-            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.impressum.email}{' '}
               <a
                 href='mailto:patrickmrx@icloud.com'
@@ -74,7 +74,7 @@ export default function ImpressumPage() {
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.impressum.responsibleTitle}
             </h2>
-            <p className='text-stone-500 dark:text-stone-400'>Patrick Marx</p>
+            <p className='text-stone-900 dark:text-stone-100'>Patrick Marx</p>
           </div>
         </div>
       </section>
