@@ -59,7 +59,7 @@ export default function Header() {
             className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
               language === 'de'
                 ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-stone-200 text-stone-900 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+                : 'bg-stone-200 text-stone-900 hover:scale-105 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
             }`}
           >
             DE
@@ -69,7 +69,7 @@ export default function Header() {
             className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
               language === 'en'
                 ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-stone-200 text-stone-900 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+                : 'bg-stone-200 text-stone-900 hover:scale-105 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
             }`}
           >
             EN
@@ -90,7 +90,7 @@ export default function Header() {
       <nav className='flex flex-wrap gap-2'>
         <button
           onClick={() => copyToClipboard('patrickmrx@icloud.com', 'mail')}
-          className='relative inline-flex cursor-copy items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='relative inline-flex cursor-copy items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:scale-105 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           {t.header.mail}
           <AnimatePresence>
@@ -109,7 +109,7 @@ export default function Header() {
         </button>
         <button
           onClick={() => copyToClipboard('+491785859301', 'phone')}
-          className='relative inline-flex cursor-copy items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='relative inline-flex cursor-copy items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:scale-105 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           {t.header.telefon}
           <AnimatePresence>
@@ -130,7 +130,7 @@ export default function Header() {
           href='/cv_patrick-marx.pdf'
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='inline-flex items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:scale-105 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           CV
         </a>
@@ -138,7 +138,7 @@ export default function Header() {
           href='https://www.linkedin.com/in/patrickmrx/'
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='inline-flex items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:scale-105 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
           LinkedIn
         </a>
