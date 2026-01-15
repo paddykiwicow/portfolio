@@ -53,7 +53,7 @@ export default function Header() {
             <h1 className='text-xl leading-tight font-medium text-stone-900 dark:text-stone-100'>
               Patrick Marx
             </h1>
-            <p className='text-stone-500 dark:text-stone-400'>
+            <p className='text-stone-900/60 dark:text-stone-100/60'>
               {t.header.position}
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Header() {
             className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
               language === 'de'
                 ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-stone-200 text-stone-600 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-400 dark:hover:bg-stone-700'
+                : 'bg-stone-200 text-stone-900/60 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100/60 dark:hover:bg-stone-700'
             }`}
           >
             DE
@@ -74,7 +74,7 @@ export default function Header() {
             className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
               language === 'en'
                 ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-stone-200 text-stone-600 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-400 dark:hover:bg-stone-700'
+                : 'bg-stone-200 text-stone-900/60 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100/60 dark:hover:bg-stone-700'
             }`}
           >
             EN
