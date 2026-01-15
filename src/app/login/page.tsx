@@ -1,7 +1,9 @@
 'use client';
 
+import { ArrowRightIcon } from '@heroicons/react/16/solid';
 import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import BackgroundImage from '@/components/BackgroundImage';
 
 export default function LoginPage() {
   const [password, setPassword] = useState('');
@@ -39,48 +41,51 @@ export default function LoginPage() {
   };
 
   return (
-    <div className='space-y-6'>
-      <div>
-        <h1 className='text-stone-900 dark:text-stone-100'>Login</h1>
-        <p className='mt-4 text-stone-500 dark:text-stone-400'>
-          Bitte geben Sie das Passwort ein, um auf das Portfolio zuzugreifen.
-        </p>
-      </div>
-
-      <form className='space-y-4' onSubmit={handleSubmit}>
+    <div className='relative'>
+      <BackgroundImage />
+      <div className='relative z-10 space-y-6'>
         <div>
-          <label htmlFor='password' className='sr-only'>
-            Passwort
-          </label>
-          <input
-            id='password'
-            name='password'
-            type='password'
-            required
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            className='w-full rounded-lg border border-stone-300 bg-stone-50 px-4 py-2 text-stone-900 placeholder-stone-400 focus:border-stone-400 focus:ring-2 focus:ring-stone-300 focus:outline-none dark:border-stone-700 dark:bg-stone-800 dark:text-stone-100 dark:placeholder-stone-500 dark:focus:border-stone-600 dark:focus:ring-stone-700'
-            placeholder='Passwort'
-            autoFocus
-          />
+          <h1 className='text-xl leading-tight font-medium text-stone-900 dark:text-stone-100'>
+            Patrick Marx
+          </h1>
+          <p className='text-stone-500 dark:text-stone-400'>
+            Senior Product Designer
+          </p>
         </div>
 
-        {error && (
-          <div className='rounded-lg bg-red-50 p-3 text-sm text-red-800 dark:bg-red-900/20 dark:text-red-300'>
-            {error}
+        <form className='space-y-4' onSubmit={handleSubmit}>
+          <div className='flex gap-2'>
+            <label htmlFor='password' className='sr-only'>
+              Passwort
+            </label>
+            <input
+              id='password'
+              name='password'
+              type='password'
+              required
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              className='flex-1 rounded-full border border-stone-300 bg-stone-50 px-4 py-2 text-stone-900 placeholder-stone-400 focus:border-violet-200 focus:ring-2 focus:ring-violet-200 focus:outline-none dark:border-stone-700 dark:bg-stone-800 dark:text-stone-100 dark:placeholder-stone-500 dark:focus:border-violet-200 dark:focus:ring-violet-200'
+              placeholder='Passwort'
+              autoFocus
+            />
+            <button
+              type='submit'
+              disabled={isLoading}
+              className='inline-flex items-center gap-2 rounded-full bg-stone-900 px-4 py-2 font-medium text-stone-100 transition-all hover:translate-x-1 hover:bg-stone-800 disabled:opacity-50 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200'
+            >
+              <span>{isLoading ? 'Wird geprüft...' : 'Anmelden'}</span>
+              <ArrowRightIcon className='h-4 w-4' />
+            </button>
           </div>
-        )}
 
-        <div>
-          <button
-            type='submit'
-            disabled={isLoading}
-            className='inline-flex items-center justify-center rounded-full bg-stone-900 px-4 py-2 font-medium text-stone-100 transition-all hover:bg-stone-800 disabled:opacity-50 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200'
-          >
-            {isLoading ? 'Wird geprüft...' : 'Anmelden'}
-          </button>
-        </div>
-      </form>
+          {error && (
+            <div className='rounded-lg bg-red-50 p-3 text-sm text-red-800 dark:bg-red-900/20 dark:text-red-300'>
+              {error}
+            </div>
+          )}
+        </form>
+      </div>
     </div>
   );
 }
