@@ -11,10 +11,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/i18n';
 
 export default function Home() {
-  const { language } = useLanguage();
-  const t = translations[language];
+  const { displayLanguage } = useLanguage();
+  const t = translations[displayLanguage];
   const projects = minimalProjects.map(p => {
-    const translated = getTranslatedProject(p, language);
+    const translated = getTranslatedProject(p, displayLanguage);
     const featuredVisual = translated.visuals.find(v => v.featured);
     const firstImageVisual = translated.visuals.find(v => v.type === 'image');
     const featuredImage =

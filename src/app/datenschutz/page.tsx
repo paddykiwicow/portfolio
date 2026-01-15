@@ -6,8 +6,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/i18n';
 
 export default function DatenschutzPage() {
-  const { language, setLanguage } = useLanguage();
-  const t = translations[language];
+  const { language, setLanguage, displayLanguage } = useLanguage();
+  const t = translations[displayLanguage];
 
   return (
     <div className='space-y-20'>

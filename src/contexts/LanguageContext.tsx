@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
   useEffect,
+  useRef,
   ReactNode,
 } from 'react';
 import type { Language } from '@/lib/i18n';
@@ -12,6 +13,7 @@ import type { Language } from '@/lib/i18n';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
+  displayLanguage: Language;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -20,6 +22,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('de');
+  const [displayLanguage, setDisplayLanguage] = useState<Language>('de');
+  const languageRef = useRef<Language>('de');
 
   useEffect(() => {
     // Load from localStorage on mount
@@ -28,6 +32,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         const saved = localStorage.getItem('language') as Language | null;
         if (saved && (saved === 'de' || saved === 'en')) {
           setLanguageState(saved);
+          setDisplayLanguage(saved);
+          languageRef.current = saved;
         }
       }
     } catch (e) {
@@ -35,19 +41,34 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  useEffect(() => {
+    languageRef.current = language;
+  }, [language]);
+
   const setLanguage = (lang: Language) => {
+    if (lang === languageRef.current) return; // Don't transition if same language
+
+    // Update language immediately for buttons/UI
     setLanguageState(lang);
+    languageRef.current = lang;
     try {
       if (typeof window !== 'undefined' && window.localStorage) {
         localStorage.setItem('language', lang);
       }
     } catch (e) {
-      // Silently fail if localStorage is not available (e.g., private mode on iOS)
+      // Silently fail if localStorage is not available
     }
+
+    // Update displayLanguage after fade-out completes (200ms)
+    setTimeout(() => {
+      setDisplayLanguage(lang);
+    }, 200);
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider
+      value={{ language, setLanguage, displayLanguage }}
+    >
       {children}
     </LanguageContext.Provider>
   );

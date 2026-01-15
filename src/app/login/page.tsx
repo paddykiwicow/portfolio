@@ -8,8 +8,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/i18n';
 
 export default function LoginPage() {
-  const { language, setLanguage } = useLanguage();
-  const t = translations[language];
+  const { language, setLanguage, displayLanguage } = useLanguage();
+  const t = translations[displayLanguage];
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
