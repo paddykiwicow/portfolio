@@ -43,13 +43,13 @@ export default function Footer() {
         <nav className='flex gap-4'>
           <Link
             href='/impressum'
-            className='text-stone-600 underline dark:text-stone-400'
+            className='text-stone-600 underline hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100'
           >
             {t.footer.impressum}
           </Link>
           <Link
             href='/datenschutz'
-            className='text-stone-600 underline dark:text-stone-400'
+            className='text-stone-600 underline hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100'
           >
             {t.footer.datenschutz}
           </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
               href='https://nextjs.org'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               Next.js
             </a>
@@ -71,7 +71,7 @@ export default function Footer() {
               href='https://www.typescriptlang.org'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               TypeScript
             </a>{' '}
@@ -80,7 +80,7 @@ export default function Footer() {
               href='https://tailwindcss.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               Tailwind CSS
             </a>
@@ -89,7 +89,7 @@ export default function Footer() {
               href='https://fonts.google.com/specimen/Instrument+Sans'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               Instrument
             </a>
@@ -101,7 +101,7 @@ export default function Footer() {
               href='https://figma.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               Figma
             </a>
@@ -110,7 +110,7 @@ export default function Footer() {
               href='https://cursor.sh'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               Cursor
             </a>
@@ -119,7 +119,7 @@ export default function Footer() {
               href='https://vercel.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline hover:text-stone-700 dark:hover:text-stone-300'
+              className='underline hover:text-stone-900 dark:hover:text-stone-100'
             >
               Vercel
             </a>
