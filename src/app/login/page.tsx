@@ -41,7 +41,7 @@ export default function LoginPage() {
   return (
     <div className='space-y-6'>
       <div>
-        <h1>Login</h1>
+        <h1 className='text-stone-900 dark:text-stone-100'>Login</h1>
         <p className='mt-4 text-stone-500 dark:text-stone-400'>
           Bitte geben Sie das Passwort ein, um auf das Portfolio zuzugreifen.
         </p>

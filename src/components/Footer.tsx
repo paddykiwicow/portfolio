@@ -51,7 +51,7 @@ export default function Footer() {
               href='https://nextjs.org'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline'
+              className='underline hover:text-stone-700 dark:hover:text-stone-300'
             >
               Next.js
             </a>
@@ -60,7 +60,7 @@ export default function Footer() {
               href='https://www.typescriptlang.org'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline'
+              className='underline hover:text-stone-700 dark:hover:text-stone-300'
             >
               TypeScript
             </a>
@@ -69,7 +69,7 @@ export default function Footer() {
               href='https://tailwindcss.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline'
+              className='underline hover:text-stone-700 dark:hover:text-stone-300'
             >
               Tailwind CSS
             </a>
@@ -81,7 +81,7 @@ export default function Footer() {
               href='https://figma.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline'
+              className='underline hover:text-stone-700 dark:hover:text-stone-300'
             >
               Figma
             </a>
@@ -90,7 +90,7 @@ export default function Footer() {
               href='https://cursor.sh'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline'
+              className='underline hover:text-stone-700 dark:hover:text-stone-300'
             >
               Cursor
             </a>
@@ -99,7 +99,7 @@ export default function Footer() {
               href='https://vercel.com'
               target='_blank'
               rel='noopener noreferrer'
-              className='underline'
+              className='underline hover:text-stone-700 dark:hover:text-stone-300'
             >
               Vercel
             </a>
@@ -107,7 +107,7 @@ export default function Footer() {
           </p>
           <p>Keine Cookies oder Tracking-Tools verwendet :)</p>
         </div>
-        <div className='font-mono text-xs text-stone-500 dark:text-stone-500'>
+        <div className='font-mono text-xs text-stone-500 dark:text-stone-400'>
           <p>Letzte Änderung: {lastCommitDate}.</p>
         </div>
       </div>

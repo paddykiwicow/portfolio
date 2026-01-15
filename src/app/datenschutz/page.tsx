@@ -19,7 +19,7 @@ export default function DatenschutzPage() {
       </div>
 
       <section>
-        <h1 className='text-3xl font-medium tracking-tight'>
+        <h1 className='text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100'>
           Datenschutzerklärung
         </h1>
         <div className='mt-8 space-y-8'>
@@ -30,12 +30,12 @@ export default function DatenschutzPage() {
             <p className='text-stone-500 dark:text-stone-400'>
               Der Schutz deiner personenbezogenen Daten ist mir wichtig.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Diese Datenschutzerklärung informiert darüber, welche
               personenbezogenen Daten beim Besuch dieser Website verarbeitet
               werden und zu welchem Zweck.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Personenbezogene Daten sind alle Daten, mit denen du persönlich
               identifiziert werden kannst.
             </p>
@@ -50,7 +50,7 @@ export default function DatenschutzPage() {
             </p>
             <div className='mt-2'>
               <p className='text-stone-500 dark:text-stone-400'>Patrick Marx</p>
-              <p className='mt-2 text-stone-500'>
+              <p className='mt-2 text-stone-500 dark:text-stone-400'>
                 E-Mail:{' '}
                 <a
                   href='mailto:patrickmrx@icloud.com'
@@ -59,7 +59,7 @@ export default function DatenschutzPage() {
                   patrickmrx@icloud.com
                 </a>
               </p>
-              <p className='mt-2 text-stone-500'>
+              <p className='mt-2 text-stone-500 dark:text-stone-400'>
                 Weitere Angaben findest du im{' '}
                 <Link
                   href='/impressum'
@@ -80,7 +80,7 @@ export default function DatenschutzPage() {
               Diese Website wird bei Vercel Inc., 340 S Lemon Ave #4133, Walnut,
               CA 91789, USA, gehostet.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Beim Aufruf der Website verarbeitet Vercel automatisch sogenannte
               Server-Logfiles. Dabei können insbesondere folgende Daten erhoben
               werden:
@@ -92,21 +92,21 @@ export default function DatenschutzPage() {
               <li>Referrer-URL</li>
               <li>Hostname</li>
             </ul>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Die Verarbeitung dieser Daten erfolgt zur technischen
               Bereitstellung der Website sowie zur Gewährleistung von Sicherheit
               und Stabilität.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Die Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit.
               f DSGVO (berechtigtes Interesse).
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Vercel verarbeitet Daten auch in den USA. Zur Absicherung des
               Datenschutzniveaus verwendet Vercel Standardvertragsklauseln gemäß
               Art. 46 DSGVO.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Weitere Informationen findest du in der{' '}
               <a
                 href='https://vercel.com/legal/privacy-policy'
@@ -127,7 +127,7 @@ export default function DatenschutzPage() {
             <p className='text-stone-500 dark:text-stone-400'>
               Diese Website verwendet keine Cookies.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Es werden weder Tracking- noch Marketing- oder Analyse-Cookies
               eingesetzt.
             </p>
@@ -141,7 +141,7 @@ export default function DatenschutzPage() {
               Auf dieser Website werden keine Tracking- oder Analyse-Tools
               eingesetzt.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Insbesondere kommen keine Dienste wie Google Analytics, Facebook
               Pixel oder vergleichbare Technologien zum Einsatz.
             </p>
@@ -155,7 +155,7 @@ export default function DatenschutzPage() {
               Diese Website enthält Links zu externen Websites Dritter (z. B.
               LinkedIn).
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Beim Anklicken eines externen Links verlässt du diese Website. Für
               die Inhalte und die Datenverarbeitung auf externen Seiten ist
               ausschließlich der jeweilige Anbieter verantwortlich.
@@ -170,7 +170,7 @@ export default function DatenschutzPage() {
               Die auf dieser Website verwendeten Schriftarten werden lokal
               gehostet.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Es erfolgt keine Verbindung zu externen Font-Anbietern wie Google
               Fonts.
             </p>
@@ -185,7 +185,7 @@ export default function DatenschutzPage() {
               dir übermittelten Daten ausschließlich zur Bearbeitung deiner
               Anfrage verwendet.
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6
               Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder Art. 6 Abs. 1
               lit. f DSGVO (berechtigtes Interesse an der Kommunikation).
@@ -210,7 +210,7 @@ export default function DatenschutzPage() {
               <li>der Verarbeitung zu widersprechen</li>
               <li>deine Daten in einem übertragbaren Format zu erhalten</li>
             </ul>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               Außerdem hast du das Recht, dich bei einer
               Datenschutzaufsichtsbehörde zu beschweren.
             </p>

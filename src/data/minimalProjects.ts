@@ -13,9 +13,9 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     role: [
       'Alleinverantwortlicher Designer im Projekt',
       'Verantwortung für den gesamten Designprozess von Skizzen bis Figma-Prototypen',
-      'Entwicklung einer neuen, modernen Designsprache, die KI und die zukünftige Ausrichtung von Ausbildung.de visuell greifbar macht',
-      'Konzeption von Abby als ganzheitliche Begleitung über das gesamte Portal und mehrere Touchpoints hinweg',
-      'Vorbereitung und visuelle Ausarbeitung der Pitch-Präsentation gemeinsam mit CPO und Head of Product',
+      'Entwicklung einer neuen Designsprache zur visuellen Übersetzung von KI und Zukunft von Ausbildung.de',
+      'Konzeption von Abby als ganzheitliche Begleitung über mehrere Touchpoints hinweg',
+      'Vorbereitung und visuelle Ausarbeitung der Pitch-Präsentation mit CPO und Head of Product',
     ],
     outcome: [
       'Entwicklung einer klaren, greifbaren und zukunftsgerichteten Produktvision',
@@ -111,12 +111,11 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     ],
     goal: 'Das Dashboard technisch und gestalterisch neu aufstellen, aufräumen und eine moderne, markenkonforme Grundlage für zukünftige Features und Upselling schaffen.',
     role: [
-      'Alleinverantwortlicher Designer im cross-funktionalen Team',
-      'Visuelle Neuausrichtung und konzeptionelles Sparring mit Product',
-      'Aufbau einer neuen Designsprache und einer wiederverwendbaren Component Library als Grundlage für neue Seiten',
+      'Alleinverantwortlicher Designer im Projekt',
+      'Visuelle Neuausrichtung und konzeptionelles Sparring mit Product Management',
+      'Aufbau einer neuen Designsprache und einer wiederverwendbaren Component Library',
       'Neustrukturierung der Informationsarchitektur inklusive zentraler Navigation',
-      'Gestaltung neuer Feature-, Upselling- und Verwaltungsseiten',
-      'Enge Zusammenarbeit mit Development, inkl. Mitarbeit am Code auf Komponentenebene',
+      'Enge Zusammenarbeit mit Development, inklusive Mitarbeit am Code auf Komponentenebene',
     ],
     outcome: [
       'Aufbau eines modularen, erweiterbaren B2B-Systems',
@@ -180,27 +179,25 @@ export const minimalProjects: MinimalProjectTemplate[] = [
   {
     title: 'Direktbewerbung Redesign',
     shortDescription:
-      'Visueller und struktureller Overhaul eines zentralen B2C-Flows',
+      'Visueller und struktureller Overhaul eines zentralen Bewerbungsflows',
     slug: 'direktbewerbung-redesign',
     context: [
-      'Die Direktbewerbung ist das zentrale Feature für Schüler:innen auf Ausbildung.de – und damit einer der wichtigsten Touchpoints der Plattform. Über Jahre war der Flow gewachsen, visuell und strukturell überholt und insbesondere mobil schwer nutzbar. Lange Formulare, wenig Guidance und viele Fehlermeldungen führten zu Frustration und Abbrüchen.',
-      'Durch die Integration externer Bewerbersysteme entstand zusätzlich die Anforderung, komplexere Formularlogiken wie Conditional Questions abzubilden. Das war der konkrete Anlass, den Flow neu zu denken – und die Gelegenheit, die Experience insgesamt deutlich zu verbessern.',
+      'Die Direktbewerbung ist das zentrale Feature für Schüler:innen auf Ausbildung.de. Gleichzeitig war die Experience über Jahre gewachsen, visuell veraltet und UX-seitig problematisch.',
+      'Lange Formulare, fehlende Guidance und viele Fehlermeldungen führten zu Frustration und Abbrüchen. Mit der Integration von Kombo entstand zusätzlich die Anforderung, komplexere Formularlogiken wie Conditional Questions abzubilden.',
     ],
-    goal: 'Einen zentralen, überfrachteten Bewerbungsflow in eine klare, gut geführte und mobiletaugliche Experience zu überführen.',
+    goal: 'Neue funktionale Anforderungen integrieren und die Direktbewerbung visuell und strukturell neu aufstellen.',
     role: [
-      'Visueller und konzeptioneller Overhaul der Direktbewerbung auf Schüler:innen-Seite',
-      'Neustrukturierung des Formulars mit Fokus auf mobile Nutzung und klare Führung',
-      'Entwicklung einer app-nahen Experience mit schrittweisem Aufbau, Progress-Anzeige und kontextueller Orientierung',
-      'Einführung einer konsistenten Design-Sprache und grundlegender UI-Komponenten für das Frontend',
-      'Enge Zusammenarbeit mit Product und Development während Konzeption und Umsetzung',
-      'Integration neuer funktionaler Anforderungen wie Conditional Questions in eine verständliche UX',
+      'Alleinverantwortlicher Designer im Projekt',
+      'Neugestaltung der Direktbewerbung von Struktur und Flow bis zu High-Fidelity-Mockups',
+      'Übersetzung neuer funktionaler Anforderungen in eine verständliche Nutzerführung',
+      'Entwicklung einer klar geführten, mobilen Experience',
+      'Enge Zusammenarbeit mit Product und Development während der Umsetzung',
     ],
     outcome: [
-      'Deutlich modernisierte, mobile-optimierte Bewerbung mit klarer Struktur und besserer Führung',
-      'Reduzierte visuelle und kognitive Komplexität durch Abschnittslogik, Progress-Indikatoren und kontextuelle Hilfen',
-      'Technische Grundlage, um komplexere Formularlogiken und zukünftige Anforderungen abzubilden',
-      'Vorzeigeprojekt für eine zeitgemäße, nutzernahe Experience auf Ausbildung.de',
-      'Basis für spätere Optimierungen in Richtung Conversion und Abbruchreduktion',
+      'Komplett überarbeitete Direktbewerbung mit klarer Struktur und konsistenter Designsprache',
+      'Einführung von Conditional Questions als Grundlage für zukünftige Anforderungen',
+      'Reduzierte Komplexität langer Formulare durch bessere Führung und Abschnittslogik',
+      'Visuelles Vorzeigeprojekt für eine zeitgemäße Bewerbung auf Ausbildung.de',
     ],
     visuals: [
       {
@@ -283,7 +280,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     shortDescription: 'Arbeiten aus dem Produktalltag bei Ausbildung.de',
     slug: 'design-explorations',
     context:
-      'Unterschiedliche Designarbeiten aus mehreren Jahren bei Ausbildung.de – von mobilen, app-nahen Interfaces im B2C-Portal über Component Libraries im B2B-Dashboard bis hin zu explorativen Brand- und UI-Studien.',
+      'Unterschiedliche Arbeiten und Experimente aus mehreren Jahren bei Ausbildung.de, von mobilen, app-nahen Interfaces im B2C-Portal über Component Libraries im B2B-Dashboard bis hin zu explorativen Brand- und UI-Arbeiten.',
     visuals: [
       {
         type: 'image',

@@ -46,7 +46,7 @@ function VisualRenderer({
 
     case 'video':
       visualElement = (
-        <div className='overflow-hidden rounded-xl bg-white'>
+        <div className='overflow-hidden rounded-xl bg-white dark:bg-stone-900'>
           <video
             src={visual.data.src}
             autoPlay
@@ -139,13 +139,13 @@ export default function ProjectTemplate({
           className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200 transition-all hover:-translate-x-1 hover:bg-stone-300 dark:bg-stone-800 dark:hover:bg-stone-700'
           aria-label='Back home'
         >
-          <ArrowLeftIcon className='h-4 w-4' />
+          <ArrowLeftIcon className='h-4 w-4 text-stone-900 dark:text-stone-100' />
         </Link>
       </div>
 
       <section>
         <div>
-          <h1 className='text-3xl font-medium tracking-tight'>
+          <h1 className='text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100'>
             {project.title}
           </h1>
           {project.shortDescription && (

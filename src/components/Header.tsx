@@ -45,7 +45,9 @@ export default function Header() {
           />
         </div>
         <div>
-          <h1 className='text-xl leading-tight font-medium'>Patrick Marx</h1>
+          <h1 className='text-xl leading-tight font-medium text-stone-900 dark:text-stone-100'>
+            Patrick Marx
+          </h1>
           <p className='text-stone-500 dark:text-stone-400'>
             Senior Product Designer
           </p>
@@ -54,12 +56,12 @@ export default function Header() {
 
       {/* Intro Text */}
       <div className='space-y-3'>
-        <p>
+        <p className='text-stone-900 dark:text-stone-100'>
           Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu
           durchdringen und aufzuräumen. Design Systems und Component Libraries
           sind mein Steckenpferd – je nerdiger, desto besser.
         </p>
-        <p>
+        <p className='text-stone-900 dark:text-stone-100'>
           Am meisten Energie gibt es mir, wenn ich nah mit Development
           zusammenarbeite.{' '}
           <span className='font-medium'>

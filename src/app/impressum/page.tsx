@@ -19,18 +19,22 @@ export default function ImpressumPage() {
       </div>
 
       <section>
-        <h1 className='text-3xl font-medium tracking-tight'>Impressum</h1>
+        <h1 className='text-3xl font-medium tracking-tight text-stone-900 dark:text-stone-100'>
+          Impressum
+        </h1>
         <div className='mt-8 space-y-8'>
           <div className='max-w-2xl'>
             <h2 className='mb-2 text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               Angaben gemäß § 5 TMG
             </h2>
             <p className='text-stone-500 dark:text-stone-400'>Patrick Marx</p>
-            <p className='mt-2 text-stone-500'>Pöttcherwiesen 1</p>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
+              Pöttcherwiesen 1
+            </p>
             <p className='text-stone-500 dark:text-stone-400'>
               30938 Burgwedel
             </p>
-            <p className='mt-2 text-stone-500'>
+            <p className='mt-2 text-stone-500 dark:text-stone-400'>
               E-Mail:{' '}
               <a
                 href='mailto:patrickmrx@icloud.com'
