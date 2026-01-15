@@ -1,20 +1,20 @@
 'use client';
 
-import Header from '@/components/Header';
 import BackgroundImage from '@/components/BackgroundImage';
+import Header from '@/components/Header';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { minimalProjects } from '@/data/minimalProjects';
+import { translations } from '@/lib/i18n';
 import { getTranslatedProject } from '@/lib/projectTranslations';
 import { ArrowRightIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { translations } from '@/lib/i18n';
 
 export default function Home() {
-  const { displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
+  const { language } = useLanguage();
+  const t = translations[language];
   const projects = minimalProjects.map(p => {
-    const translated = getTranslatedProject(p, displayLanguage);
+    const translated = getTranslatedProject(p, language);
     const featuredVisual = translated.visuals.find(v => v.featured);
     const firstImageVisual = translated.visuals.find(v => v.type === 'image');
     const featuredImage =

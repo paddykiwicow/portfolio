@@ -95,9 +95,9 @@ export default function ProjectTemplate({
   project,
   currentSlug,
 }: ProjectTemplateProps) {
-  const { language, setLanguage, displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
-  const translatedProject = getTranslatedProject(project, displayLanguage);
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
+  const translatedProject = getTranslatedProject(project, language);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);

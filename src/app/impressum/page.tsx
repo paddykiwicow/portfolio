@@ -6,8 +6,8 @@ import { ArrowLeftIcon } from '@heroicons/react/16/solid';
 import Link from 'next/link';
 
 export default function ImpressumPage() {
-  const { language, setLanguage, displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
 
   return (
     <div className='space-y-20'>

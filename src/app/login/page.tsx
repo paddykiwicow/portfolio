@@ -1,15 +1,15 @@
 'use client';
 
-import { ArrowRightIcon } from '@heroicons/react/16/solid';
-import { useState, FormEvent } from 'react';
-import { useRouter } from 'next/navigation';
 import BackgroundImage from '@/components/BackgroundImage';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/i18n';
+import { ArrowRightIcon } from '@heroicons/react/16/solid';
+import { useRouter } from 'next/navigation';
+import { FormEvent, useState } from 'react';
 
 export default function LoginPage() {
-  const { language, setLanguage, displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);

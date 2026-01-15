@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function Footer() {
-  const { displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
+  const { language } = useLanguage();
+  const t = translations[language];
   const [lastCommitDate, setLastCommitDate] = useState<string>('');
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function Footer() {
       .then(data => {
         // Verwende das richtige Format basierend auf der Sprache
         const formattedDate =
-          displayLanguage === 'de'
+          language === 'de'
             ? data.lastCommitDateFormattedDE || data.lastCommitDateFormatted
             : data.lastCommitDateFormattedEN || data.lastCommitDateFormatted;
         setLastCommitDate(formattedDate);
@@ -25,20 +25,17 @@ export default function Footer() {
       .catch(() => {
         // Fallback
         setLastCommitDate(
-          new Date().toLocaleDateString(
-            displayLanguage === 'de' ? 'de-DE' : 'en-US',
-            {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-              hour: '2-digit',
-              minute: '2-digit',
-              timeZone: 'Europe/Berlin',
-            }
-          )
+          new Date().toLocaleDateString(language === 'de' ? 'de-DE' : 'en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZone: 'Europe/Berlin',
+          })
         );
       });
-  }, [displayLanguage]);
+  }, [language]);
 
   return (
     <footer className='mt-20 space-y-4 border-t border-stone-200 pt-8 text-sm dark:border-stone-800'>

@@ -7,8 +7,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
-  const { language, setLanguage, displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
   const [mailCopied, setMailCopied] = useState(false);
   const [phoneCopied, setPhoneCopied] = useState(false);
 

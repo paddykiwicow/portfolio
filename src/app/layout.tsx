@@ -1,9 +1,7 @@
-import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import ThemeProvider from '@/components/ThemeProvider';
-import LanguageSwitch from '@/components/LanguageSwitch';
-import LanguageTransition from '@/components/LanguageTransition';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -84,12 +82,10 @@ export default function RootLayout({
       <body>
         <ThemeProvider />
         <LanguageProvider>
-          <LanguageTransition>
-            <main className='mx-auto max-w-2xl px-4 py-10'>
-              {children}
-              <Footer />
-            </main>
-          </LanguageTransition>
+          <main className='mx-auto max-w-2xl px-4 py-10'>
+            {children}
+            <Footer />
+          </main>
         </LanguageProvider>
       </body>
     </html>

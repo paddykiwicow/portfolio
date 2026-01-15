@@ -1,13 +1,13 @@
 'use client';
 
-import { ArrowLeftIcon } from '@heroicons/react/16/solid';
-import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/i18n';
+import { ArrowLeftIcon } from '@heroicons/react/16/solid';
+import Link from 'next/link';
 
 export default function DatenschutzPage() {
-  const { language, setLanguage, displayLanguage } = useLanguage();
-  const t = translations[displayLanguage];
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
 
   return (
     <div className='space-y-20'>
