@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   icons: {
     apple: '/images/avatar.webp',
   },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    viewportFit: 'cover',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+  },
 };
 
 export default function RootLayout({
