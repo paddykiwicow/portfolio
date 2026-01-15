@@ -206,7 +206,7 @@ export const translations: Translations = {
       intro1:
         'Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu durchdringen und aufzuräumen. Design Systems und Component Libraries sind mein Steckenpferd – je nerdiger, desto besser.',
       intro2:
-        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite. Ich designe gerne in Figma, bin aber genauso gerne am Code. Tagelange Design-Sessions sind mir zu zäh – ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
+        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite. <span class="font-medium">Ich designe gerne in Figma, bin aber genauso gerne am Code</span>. Tagelange Design-Sessions sind mir zu zäh – ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
       mail: 'Mail',
       telefon: 'Telefon',
       copied: 'Kopiert!',
@@ -327,7 +327,7 @@ export const translations: Translations = {
       intro1:
         'I love sitting in front of complex, grown systems, diving deep into everything and cleaning it up. Design Systems and Component Libraries are my thing – the nerdier, the better.',
       intro2:
-        "I get the most energy when I work closely with Development. I like designing in Figma, but I'm just as happy working with code. Days-long design sessions are too tedious for me – I prefer going earlier into prototyping and implementing ideas directly into production.",
+        'I get the most energy when I work closely with Development. <span class="font-medium">I like designing in Figma, but I\'m just as happy working with code</span>. Days-long design sessions are too tedious for me – I prefer going earlier into prototyping and implementing ideas directly into production.',
       mail: 'Mail',
       telefon: 'Phone',
       copied: 'Copied!',

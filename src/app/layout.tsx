@@ -65,9 +65,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (isDark) {
-                  document.documentElement.classList.add('dark');
+                try {
+                  if (typeof window !== 'undefined' && window.matchMedia) {
+                    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (isDark) {
+                      document.documentElement.classList.add('dark');
+                    }
+                  }
+                } catch (e) {
+                  // Silently fail if matchMedia is not available
                 }
               })();
             `,

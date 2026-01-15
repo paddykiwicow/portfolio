@@ -85,7 +85,10 @@ export default function Header() {
       {/* Intro Text */}
       <div className='space-y-3'>
         <p className='text-stone-900 dark:text-stone-100'>{t.header.intro1}</p>
-        <p className='text-stone-900 dark:text-stone-100'>{t.header.intro2}</p>
+        <p
+          className='text-stone-900 dark:text-stone-100'
+          dangerouslySetInnerHTML={{ __html: t.header.intro2 }}
+        />
       </div>
 
       {/* Links as Pills */}

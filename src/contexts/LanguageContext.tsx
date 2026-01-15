@@ -23,15 +23,27 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Load from localStorage on mount
-    const saved = localStorage.getItem('language') as Language | null;
-    if (saved && (saved === 'de' || saved === 'en')) {
-      setLanguageState(saved);
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const saved = localStorage.getItem('language') as Language | null;
+        if (saved && (saved === 'de' || saved === 'en')) {
+          setLanguageState(saved);
+        }
+      }
+    } catch (e) {
+      // Silently fail if localStorage is not available (e.g., private mode on iOS)
     }
   }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('language', lang);
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        localStorage.setItem('language', lang);
+      }
+    } catch (e) {
+      // Silently fail if localStorage is not available (e.g., private mode on iOS)
+    }
   };
 
   return (
