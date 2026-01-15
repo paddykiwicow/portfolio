@@ -2,11 +2,6 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
 import { translations } from '@/lib/i18n';
-import {
-  ArrowTopRightOnSquareIcon,
-  ClipboardDocumentListIcon,
-  DocumentArrowDownIcon,
-} from '@heroicons/react/16/solid';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -64,7 +59,7 @@ export default function Header() {
             className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
               language === 'de'
                 ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-stone-200 text-stone-900/60 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100/60 dark:hover:bg-stone-700'
+                : 'bg-stone-200 text-stone-900 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
             }`}
           >
             DE
@@ -74,7 +69,7 @@ export default function Header() {
             className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
               language === 'en'
                 ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
-                : 'bg-stone-200 text-stone-900/60 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100/60 dark:hover:bg-stone-700'
+                : 'bg-stone-200 text-stone-900 hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
             }`}
           >
             EN
@@ -95,10 +90,9 @@ export default function Header() {
       <nav className='flex flex-wrap gap-2'>
         <button
           onClick={() => copyToClipboard('patrickmrx@icloud.com', 'mail')}
-          className='relative inline-flex cursor-copy items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='relative inline-flex cursor-copy items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
-          <span>{t.header.mail}</span>
-          <ClipboardDocumentListIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
+          {t.header.mail}
           <AnimatePresence>
             {mailCopied && (
               <motion.span
@@ -115,10 +109,9 @@ export default function Header() {
         </button>
         <button
           onClick={() => copyToClipboard('+491785859301', 'phone')}
-          className='relative inline-flex cursor-copy items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='relative inline-flex cursor-copy items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
-          <span>{t.header.telefon}</span>
-          <ClipboardDocumentListIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
+          {t.header.telefon}
           <AnimatePresence>
             {phoneCopied && (
               <motion.span
@@ -137,19 +130,17 @@ export default function Header() {
           href='/cv_patrick-marx.pdf'
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='inline-flex items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
-          <span>CV</span>
-          <DocumentArrowDownIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
+          CV
         </a>
         <a
           href='https://www.linkedin.com/in/patrickmrx/'
           target='_blank'
           rel='noopener noreferrer'
-          className='inline-flex items-center justify-center gap-1.5 rounded-full bg-stone-200 px-4 py-2 font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
+          className='inline-flex items-center justify-center rounded-full bg-stone-200 px-4 py-2 text-[15px] font-medium text-stone-900 transition-all hover:bg-stone-300 dark:bg-stone-800 dark:text-stone-100 dark:hover:bg-stone-700'
         >
-          <span>LinkedIn</span>
-          <ArrowTopRightOnSquareIcon className='h-4 w-4 flex-shrink-0 text-stone-500 dark:text-stone-400' />
+          LinkedIn
         </a>
       </nav>
     </header>
