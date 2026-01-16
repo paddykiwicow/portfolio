@@ -41,7 +41,7 @@ function VisualRenderer({
           width={0}
           height={0}
           sizes='(max-width: 768px) 100vw, 768px'
-          className={`h-auto w-full ${isHeader ? 'md:rounded-xl' : 'rounded-xl'}`}
+          className={`h-auto w-full ${isHeader ? 'md:rounded-xl' : 'rounded-xl ring-1 ring-stone-200 dark:ring-stone-700'}`}
           unoptimized
         />
       );
@@ -49,7 +49,7 @@ function VisualRenderer({
 
     case 'video':
       visualElement = (
-        <div className='overflow-hidden rounded-xl bg-white dark:bg-stone-900'>
+        <div className='overflow-hidden rounded-xl bg-white ring-1 ring-stone-200 dark:bg-stone-900 dark:ring-stone-700'>
           <video
             src={visual.data.src}
             autoPlay
@@ -73,11 +73,17 @@ function VisualRenderer({
   return (
     <div className='w-full'>
       <div
-        onClick={visual.type === 'image' && !isHeader ? onClick : undefined}
+        onClick={
+          !isHeader && (visual.type === 'image' || visual.type === 'video')
+            ? onClick
+            : undefined
+        }
         className={`${
-          visual.type === 'image' && !isHeader
-            ? 'cursor-zoom-in transition-opacity hover:opacity-90 md:cursor-zoom-in'
-            : ''
+          !isHeader && (visual.type === 'image' || visual.type === 'video')
+            ? 'cursor-pointer transition-all hover:scale-105'
+            : isHeader
+              ? ''
+              : 'transition-all hover:scale-105'
         }`}
       >
         {visualElement}
@@ -192,8 +198,8 @@ export default function ProjectTemplate({
           </div>
         )}
         {translatedProject.context && (
-          <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
+          <div className='mt-10 max-w-2xl'>
+            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.project.context}
             </h2>
             {Array.isArray(translatedProject.context) ? (
@@ -218,37 +224,53 @@ export default function ProjectTemplate({
           </div>
         )}
         {translatedProject.role && (
-          <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
+          <div className='mt-10 max-w-2xl'>
+            <h2 className='mb-2 font-serif text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.project.role}
             </h2>
             {Array.isArray(translatedProject.role) ? (
-              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                {translatedProject.role.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+              <ul className='list-disc space-y-0 pl-5 text-stone-900 marker:text-stone-500 dark:text-stone-100 dark:marker:text-stone-400'>
+                {translatedProject.role.map((item, index) => {
+                  const roleArray = translatedProject.role as string[];
+                  return (
+                    <li key={index} className='py-2'>
+                      {item}
+                      {index < roleArray.length - 1 && (
+                        <div className='mt-2 border-t border-stone-200 dark:border-stone-800' />
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             ) : (
-              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                <li>{translatedProject.role}</li>
+              <ul className='list-disc space-y-0 pl-5 text-stone-900 marker:text-stone-500 dark:text-stone-100 dark:marker:text-stone-400'>
+                <li className='py-2'>{translatedProject.role}</li>
               </ul>
             )}
           </div>
         )}
         {translatedProject.outcome && (
-          <div className='mt-8 max-w-2xl'>
-            <h2 className='mb-3 font-serif text-lg font-medium tracking-tight text-violet-600 italic dark:text-violet-400'>
+          <div className='mt-10 max-w-2xl'>
+            <h2 className='mb-3 font-serif text-lg font-medium tracking-tight text-stone-900 dark:text-stone-100'>
               {t.project.outcome}
             </h2>
             {Array.isArray(translatedProject.outcome) ? (
-              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                {translatedProject.outcome.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
+              <ul className='list-disc space-y-0 pl-5 text-stone-900 marker:text-stone-500 dark:text-stone-100 dark:marker:text-stone-400'>
+                {translatedProject.outcome.map((item, index) => {
+                  const outcomeArray = translatedProject.outcome as string[];
+                  return (
+                    <li key={index} className='py-2'>
+                      {item}
+                      {index < outcomeArray.length - 1 && (
+                        <div className='mt-2 border-t border-stone-200 dark:border-stone-800' />
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             ) : (
-              <ul className='list-disc space-y-1 pl-6 text-stone-900 dark:text-stone-100'>
-                <li>{translatedProject.outcome}</li>
+              <ul className='list-disc space-y-0 pl-5 text-stone-900 marker:text-stone-500 dark:text-stone-100 dark:marker:text-stone-400'>
+                <li className='py-2'>{translatedProject.outcome}</li>
               </ul>
             )}
           </div>
@@ -263,7 +285,7 @@ export default function ProjectTemplate({
                 key={index + 1}
                 visual={visual}
                 onClick={
-                  visual.type === 'image'
+                  visual.type === 'image' || visual.type === 'video'
                     ? () => openLightbox(index)
                     : undefined
                 }

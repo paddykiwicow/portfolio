@@ -33,7 +33,7 @@ export default function Home() {
         <Header />
 
         <section className='space-y-4'>
-          <h2 className='font-serif text-lg leading-tight font-medium text-violet-600 italic dark:text-violet-400'>
+          <h2 className='font-serif text-lg leading-tight font-medium text-stone-900 dark:text-stone-100'>
             {t.home.projects}
           </h2>
           <ul>

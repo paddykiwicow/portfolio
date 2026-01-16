@@ -1,9 +1,12 @@
 @import 'tailwindcss';
-@import '@fontsource/instrument-sans/latin-400.css';
-@import '@fontsource/instrument-sans/latin-500.css';
-@import '@fontsource/instrument-sans/latin-600.css';
-@import '@fontsource/instrument-sans/latin-700.css';
-@import '@fontsource/instrument-serif/latin-400-italic.css';
+@import '@fontsource/zalando-sans/latin-400.css';
+@import '@fontsource/zalando-sans/latin-500.css';
+@import '@fontsource/zalando-sans/latin-600.css';
+@import '@fontsource/zalando-sans/latin-700.css';
+@import '@fontsource/zalando-sans-semiexpanded/latin-400.css';
+@import '@fontsource/zalando-sans-semiexpanded/latin-500.css';
+@import '@fontsource/zalando-sans-semiexpanded/latin-600.css';
+@import '@fontsource/zalando-sans-semiexpanded/latin-700.css';
 
 @layer base {
   html {
@@ -11,12 +14,15 @@
   }
   body {
     @apply bg-stone-100 text-stone-900 dark:bg-stone-900 dark:text-stone-100;
-    font-family: 'Instrument Sans', sans-serif;
+    font-family: 'Zalando Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 
 @layer utilities {
   .font-serif {
-    font-family: 'Instrument Serif', serif;
+    font-family: 'Zalando Sans SemiExpanded', sans-serif;
   }
 }

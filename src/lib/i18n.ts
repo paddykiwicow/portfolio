@@ -19,6 +19,7 @@ type Translations = {
       checking: string;
       wrongPassword: string;
       error: string;
+      rateLimit: string;
     };
     project: {
       context: string;
@@ -74,6 +75,7 @@ type Translations = {
       section4Title: string;
       section4Text1: string;
       section4Text2: string;
+      section4Text3: string;
       section5Title: string;
       section5Text1: string;
       section5Text2: string;
@@ -117,6 +119,7 @@ type Translations = {
       checking: string;
       wrongPassword: string;
       error: string;
+      rateLimit: string;
     };
     project: {
       context: string;
@@ -172,6 +175,7 @@ type Translations = {
       section4Title: string;
       section4Text1: string;
       section4Text2: string;
+      section4Text3: string;
       section5Title: string;
       section5Text1: string;
       section5Text2: string;
@@ -220,14 +224,15 @@ export const translations: Translations = {
       checking: 'Wird geprüft...',
       wrongPassword: 'Falsches Passwort',
       error: 'Ein Fehler ist aufgetreten',
+      rateLimit: 'Zu viele Versuche. Bitte versuchen Sie es später erneut.',
     },
     project: {
       context: 'Kontext',
       role: 'Rolle',
       outcome: 'Outcome',
       goal: 'Das Ziel:',
-      previousProject: 'Vorheriges Projekt',
-      nextProject: 'Nächstes Projekt',
+      previousProject: 'Zurück',
+      nextProject: 'Weiter',
       backHome: 'Zurück zur Startseite',
     },
     footer: {
@@ -237,7 +242,7 @@ export const translations: Translations = {
       designedIn: 'Designed in',
       developedWith: 'Entwickelt mit',
       hostedOn: 'Gehosted auf',
-      noCookies: 'Keine Cookies oder Tracking-Tools verwendet :)',
+      noCookies: 'Kein Tracking :)',
       lastChange: 'Letzte Änderung:',
       impressum: 'Impressum',
       datenschutz: 'Datenschutz',
@@ -282,9 +287,12 @@ export const translations: Translations = {
       section3Text6: 'Weitere Informationen findest du in der',
       section3Link: 'Datenschutzerklärung von Vercel',
       section4Title: '4. Cookies',
-      section4Text1: 'Diese Website verwendet keine Cookies.',
+      section4Text1:
+        'Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb der Website erforderlich sind (z. B. zur Bereitstellung eines passwortgeschützten Bereichs).',
       section4Text2:
-        'Es werden weder Tracking- noch Marketing- oder Analyse-Cookies eingesetzt.',
+        'Diese Cookies dienen nicht der Analyse des Nutzerverhaltens und werden nicht zu Marketingzwecken eingesetzt.',
+      section4Text3:
+        'Die Verwendung technisch notwendiger Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren und funktionalen Bereitstellung der Website).',
       section5Title: '5. Tracking und Analyse',
       section5Text1:
         'Auf dieser Website werden keine Tracking- oder Analyse-Tools eingesetzt.',
@@ -341,14 +349,15 @@ export const translations: Translations = {
       checking: 'Checking...',
       wrongPassword: 'Wrong password',
       error: 'An error occurred',
+      rateLimit: 'Too many attempts. Please try again later.',
     },
     project: {
       context: 'Context',
       role: 'Role',
       outcome: 'Outcome',
       goal: 'The Goal:',
-      previousProject: 'Previous Project',
-      nextProject: 'Next Project',
+      previousProject: 'Back',
+      nextProject: 'Next',
       backHome: 'Back to homepage',
     },
     footer: {
@@ -358,7 +367,7 @@ export const translations: Translations = {
       designedIn: 'Designed in',
       developedWith: 'Developed with',
       hostedOn: 'Hosted on',
-      noCookies: 'No cookies or tracking tools used :)',
+      noCookies: 'No tracking :)',
       lastChange: 'Last change:',
       impressum: 'Imprint',
       datenschutz: 'Privacy Policy',
@@ -401,8 +410,12 @@ export const translations: Translations = {
       section3Text6: 'Further information can be found in the',
       section3Link: 'Privacy Policy of Vercel',
       section4Title: '4. Cookies',
-      section4Text1: 'This website does not use cookies.',
-      section4Text2: 'No tracking, marketing or analytics cookies are used.',
+      section4Text1:
+        'This website uses only technically necessary cookies that are required for the operation of the website (e.g., to provide a password-protected area).',
+      section4Text2:
+        'These cookies do not serve to analyze user behavior and are not used for marketing purposes.',
+      section4Text3:
+        'The use of technically necessary cookies is based on Art. 6 para. 1 lit. f GDPR (legitimate interest in a secure and functional provision of the website).',
       section5Title: '5. Tracking and Analytics',
       section5Text1: 'No tracking or analytics tools are used on this website.',
       section5Text2:

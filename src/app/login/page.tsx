@@ -35,7 +35,11 @@ export default function LoginPage() {
         router.refresh();
       } else {
         const data = await response.json();
-        setError(data.error || t.login.wrongPassword);
+        if (response.status === 429) {
+          setError(t.login.rateLimit);
+        } else {
+          setError(data.error || t.login.wrongPassword);
+        }
       }
     } catch (err) {
       setError(t.login.error);

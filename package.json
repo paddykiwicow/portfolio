@@ -18,6 +18,9 @@
   "dependencies": {
     "@fontsource/instrument-sans": "^5.2.8",
     "@fontsource/instrument-serif": "^5.2.8",
+    "@fontsource/zalando-sans": "^5.2.1",
+    "@fontsource/zalando-sans-expanded": "^5.2.1",
+    "@fontsource/zalando-sans-semiexpanded": "^5.2.1",
     "@heroicons/react": "^2.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.26.2",

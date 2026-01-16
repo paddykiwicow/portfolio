@@ -144,6 +144,9 @@ export default function DatenschutzPage() {
             <p className='mt-2 text-stone-900 dark:text-stone-100'>
               {t.datenschutz.section4Text2}
             </p>
+            <p className='mt-2 text-stone-900 dark:text-stone-100'>
+              {t.datenschutz.section4Text3}
+            </p>
           </div>
 
           <div className='max-w-2xl'>
