@@ -9,6 +9,12 @@ type Translations = {
       mail: string;
       telefon: string;
       copied: string;
+      tooltipMail: string;
+      tooltipPhone: string;
+      tooltipCV: string;
+      tooltipLinkedIn: string;
+      tooltipLanguage: string;
+      tooltipTheme: string;
     };
     home: {
       projects: string;
@@ -109,6 +115,12 @@ type Translations = {
       mail: string;
       telefon: string;
       copied: string;
+      tooltipMail: string;
+      tooltipPhone: string;
+      tooltipCV: string;
+      tooltipLinkedIn: string;
+      tooltipLanguage: string;
+      tooltipTheme: string;
     };
     home: {
       projects: string;
@@ -208,12 +220,18 @@ export const translations: Translations = {
     header: {
       position: 'Senior Product Designer',
       intro1:
-        'Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu durchdringen und aufzuräumen. Design Systems und Component Libraries sind mein Steckenpferd – je nerdiger, desto besser.',
+        'Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu durchdringen und aufzuräumen. <span class="font-medium text-stone-900 dark:text-stone-100">Design Systems</span> <span class="font-medium text-stone-900 dark:text-stone-100">und</span> <span class="font-medium text-stone-900 dark:text-stone-100">Component Libraries</span> <span class="font-medium text-stone-900 dark:text-stone-100">sind mein Steckenpferd</span> – je nerdiger, desto besser.',
       intro2:
-        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite. <span class="font-medium">Ich designe gerne in Figma, bin aber genauso gerne am Code</span>. Tagelange Design-Sessions sind mir zu zäh – ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
+        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite. <span class="font-medium text-stone-900 dark:text-stone-100">Ich designe gerne in <svg class="inline-block h-3.5 w-3.5 -translate-y-0.5 align-middle mr-1" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 300c27.614 0 50-22.386 50-50v-50H50c-27.614 0-50 22.386-50 50s22.386 50 50 50z" fill="#0ACF83"/><path d="M0 150c0-27.614 22.386-50 50-50h50v100H50c-27.614 0-50-22.386-50-50z" fill="#A259FF"/><path d="M0 50C0 22.386 22.386 0 50 0h50v100H50C22.386 100 0 77.614 0 50z" fill="#F24E1E"/><path d="M100 0h50c27.614 0 50 22.386 50 50s-22.386 50-50 50h-50V0z" fill="#FF7262"/><path d="M200 150c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" fill="#1ABCFE"/></svg>Figma, bin aber genauso gerne am Code in <img src="/images/CUBE_2D_LIGHT.svg" alt="Cursor" class="inline-block h-3.5 w-3.5 -translate-y-0.5 align-middle mr-1 dark:hidden" /><img src="/images/CUBE_2D_DARK.svg" alt="Cursor" class="hidden h-3.5 w-3.5 -translate-y-0.5 align-middle mr-1 dark:inline-block" />Cursor</span>. Tagelange Design-Sessions sind mir zu zäh. Ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
       mail: 'Mail',
       telefon: 'Telefon',
       copied: 'Kopiert!',
+      tooltipMail: 'E-Mail-Adresse kopieren',
+      tooltipPhone: 'Telefonnummer kopieren',
+      tooltipCV: 'Lebenslauf herunterladen',
+      tooltipLinkedIn: 'LinkedIn-Profil öffnen',
+      tooltipLanguage: 'Sprache wechseln',
+      tooltipTheme: 'Theme wechseln',
     },
     home: {
       projects: 'Projekte',
@@ -333,12 +351,18 @@ export const translations: Translations = {
     header: {
       position: 'Senior Product Designer',
       intro1:
-        'I love sitting in front of complex, grown systems, diving deep into everything and cleaning it up. Design Systems and Component Libraries are my thing – the nerdier, the better.',
+        'I love sitting in front of complex, grown systems, diving deep into everything and cleaning it up. <span class="font-medium text-stone-900 dark:text-stone-100">Design Systems</span> <span class="font-medium text-stone-900 dark:text-stone-100">and</span> <span class="font-medium text-stone-900 dark:text-stone-100">Component Libraries</span> <span class="font-medium text-stone-900 dark:text-stone-100">are my thing</span> – the nerdier, the better.',
       intro2:
-        'I get the most energy when I work closely with Development. <span class="font-medium">I like designing in Figma, but I\'m just as happy working with code</span>. Days-long design sessions are too tedious for me – I prefer going earlier into prototyping and implementing ideas directly into production.',
+        'I get the most energy when I work closely with Development. <span class="font-medium text-stone-900 dark:text-stone-100">I like designing in <svg class="inline-block h-3.5 w-3.5 -translate-y-0.5 align-middle mr-1" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 300c27.614 0 50-22.386 50-50v-50H50c-27.614 0-50 22.386-50 50s22.386 50 50 50z" fill="#0ACF83"/><path d="M0 150c0-27.614 22.386-50 50-50h50v100H50c-27.614 0-50-22.386-50-50z" fill="#A259FF"/><path d="M0 50C0 22.386 22.386 0 50 0h50v100H50C22.386 100 0 77.614 0 50z" fill="#F24E1E"/><path d="M100 0h50c27.614 0 50 22.386 50 50s-22.386 50-50 50h-50V0z" fill="#FF7262"/><path d="M200 150c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" fill="#1ABCFE"/></svg>Figma, but I\'m just as happy working with code in <img src="/images/CUBE_2D_LIGHT.svg" alt="Cursor" class="inline-block h-3.5 w-3.5 -translate-y-0.5 align-middle mr-1 dark:hidden" /><img src="/images/CUBE_2D_DARK.svg" alt="Cursor" class="hidden h-3.5 w-3.5 -translate-y-0.5 align-middle mr-1 dark:inline-block" />Cursor</span>. Days-long design sessions are too tedious for me. verI prefer going earlier into prototyping and implementing ideas directly into production.',
       mail: 'Mail',
       telefon: 'Phone',
       copied: 'Copied!',
+      tooltipMail: 'Copy email address',
+      tooltipPhone: 'Copy phone number',
+      tooltipCV: 'Download CV',
+      tooltipLinkedIn: 'Open LinkedIn profile',
+      tooltipLanguage: 'Switch language',
+      tooltipTheme: 'Switch theme',
     },
     home: {
       projects: 'Projects',

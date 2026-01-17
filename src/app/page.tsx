@@ -6,7 +6,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { minimalProjects } from '@/data/minimalProjects';
 import { translations } from '@/lib/i18n';
 import { getTranslatedProject } from '@/lib/projectTranslations';
-import { ArrowRightIcon } from '@heroicons/react/16/solid';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -33,7 +32,7 @@ export default function Home() {
         <Header />
 
         <section className='space-y-4'>
-          <h2 className='font-serif text-lg leading-tight font-medium text-stone-900 dark:text-stone-100'>
+          <h2 className='font-serif text-lg leading-tight font-medium tracking-tight text-stone-900 dark:text-stone-100'>
             {t.home.projects}
           </h2>
           <ul>
@@ -66,8 +65,20 @@ export default function Home() {
                     </p>
                   </div>
                   <div className='flex-shrink-0'>
-                    <div className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200 transition-all group-hover:translate-x-1 group-hover:bg-stone-300 dark:bg-stone-800 dark:group-hover:bg-stone-700'>
-                      <ArrowRightIcon className='h-4 w-4' />
+                    <div className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all group-hover:translate-x-1 group-hover:bg-stone-300/60 dark:bg-stone-800/50 dark:group-hover:bg-stone-700/60'>
+                      <svg
+                        className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                        fill='none'
+                        viewBox='0 0 24 24'
+                        stroke='currentColor'
+                        strokeWidth={2.5}
+                      >
+                        <path
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          d='M9 5l7 7-7 7'
+                        />
+                      </svg>
                     </div>
                   </div>
                 </Link>

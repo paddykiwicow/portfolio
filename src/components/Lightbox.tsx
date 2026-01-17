@@ -117,15 +117,15 @@ export default function Lightbox({
             aria-label='Previous image'
           >
             <svg
-              className='h-6 w-6'
+              className='h-6 w-6 text-white'
               fill='none'
-              stroke='currentColor'
               viewBox='0 0 24 24'
+              stroke='currentColor'
+              strokeWidth={2.5}
             >
               <path
                 strokeLinecap='round'
                 strokeLinejoin='round'
-                strokeWidth={2}
                 d='M15 19l-7-7 7-7'
               />
             </svg>
@@ -139,15 +139,15 @@ export default function Lightbox({
             aria-label='Next image'
           >
             <svg
-              className='h-6 w-6'
+              className='h-6 w-6 text-white'
               fill='none'
-              stroke='currentColor'
               viewBox='0 0 24 24'
+              stroke='currentColor'
+              strokeWidth={2.5}
             >
               <path
                 strokeLinecap='round'
                 strokeLinejoin='round'
-                strokeWidth={2}
                 d='M9 5l7 7-7 7'
               />
             </svg>

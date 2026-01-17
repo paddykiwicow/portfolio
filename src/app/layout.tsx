@@ -1,5 +1,4 @@
 import Footer from '@/components/Footer';
-import ThemeProvider from '@/components/ThemeProvider';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -60,29 +59,10 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/icon.png' type='image/png' />
         <link rel='apple-touch-icon' href='/apple-icon.png' />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  if (typeof window !== 'undefined' && window.matchMedia) {
-                    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    if (isDark) {
-                      document.documentElement.classList.add('dark');
-                    }
-                  }
-                } catch (e) {
-                  // Silently fail if matchMedia is not available
-                }
-              })();
-            `,
-          }}
-        />
       </head>
       <body>
-        <ThemeProvider />
         <LanguageProvider>
-          <main className='mx-auto max-w-2xl px-4 py-10'>
+          <main className='mx-auto max-w-lg px-4 py-10'>
             {children}
             <Footer />
           </main>
