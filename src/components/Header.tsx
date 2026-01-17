@@ -52,15 +52,23 @@ export default function Header() {
     }
   }, []);
 
+  // Reset "Copied!" states when hovering over other buttons
+  useEffect(() => {
+    if (hoveredIcon && hoveredIcon !== 'mail' && hoveredIcon !== 'phone') {
+      setMailCopied(false);
+      setPhoneCopied(false);
+    }
+  }, [hoveredIcon]);
+
   const copyToClipboard = async (text: string, type: 'mail' | 'phone') => {
     try {
       await navigator.clipboard.writeText(text);
       if (type === 'mail') {
         setMailCopied(true);
-        setTimeout(() => setMailCopied(false), 2000);
+        setTimeout(() => setMailCopied(false), 1000);
       } else {
         setPhoneCopied(true);
-        setTimeout(() => setPhoneCopied(false), 2000);
+        setTimeout(() => setPhoneCopied(false), 1000);
       }
     } catch (err) {
       // Fallback for older browsers or mobile
@@ -74,10 +82,10 @@ export default function Header() {
         document.execCommand('copy');
         if (type === 'mail') {
           setMailCopied(true);
-          setTimeout(() => setMailCopied(false), 2000);
+          setTimeout(() => setMailCopied(false), 1000);
         } else {
           setPhoneCopied(true);
-          setTimeout(() => setPhoneCopied(false), 2000);
+          setTimeout(() => setPhoneCopied(false), 1000);
         }
       } catch {
         // Silently fail
@@ -91,7 +99,7 @@ export default function Header() {
       {/* Avatar + Contact Icons + Language Switch */}
       <div className='flex items-center justify-between gap-4'>
         {/* Avatar */}
-        <div className='relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full'>
+        <div className='relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full shadow-md ring-2 ring-white dark:ring-stone-700'>
           <Image
             src='/images/avatar.webp'
             alt='Patrick Marx'
@@ -118,7 +126,7 @@ export default function Header() {
               onMouseLeave={() => {
                 if (supportsHover) setHoveredIcon(null);
               }}
-              className='relative flex h-8 w-8 cursor-pointer items-center justify-center overflow-visible rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+              className='relative flex h-8 w-8 cursor-pointer items-center justify-center overflow-visible rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
               style={{ touchAction: 'manipulation' }}
               aria-label={t.header.mail}
             >
@@ -126,27 +134,31 @@ export default function Header() {
                 icon='streamline-flex:mail-send-envelope-solid'
                 className='h-4 w-4 text-stone-700 dark:text-stone-300'
               />
-              <AnimatePresence>
-                {mailCopied && (
+              <AnimatePresence mode='wait'>
+                {((mailCopied &&
+                  (hoveredIcon === 'mail' || hoveredIcon === null)) ||
+                  (supportsHover && hoveredIcon === 'mail')) && (
                   <motion.span
-                    initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                    key={mailCopied ? 'copied' : 'tooltip'}
+                    initial={{
+                      opacity: 0,
+                      y: 4,
+                      scale: 0.9,
+                      filter: 'blur(4px)',
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      filter: 'blur(0px)',
+                    }}
+                    exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(4px)' }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className='absolute top-full left-1/2 z-50 mt-2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 md:-top-8 md:mt-0 dark:bg-stone-200 dark:text-stone-900'
+                    className={`absolute left-1/2 z-50 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900 ${
+                      mailCopied ? 'top-full mt-2 md:-top-8 md:mt-0' : '-top-8'
+                    }`}
                   >
-                    {t.header.copied}
-                  </motion.span>
-                )}
-                {!mailCopied && supportsHover && hoveredIcon === 'mail' && (
-                  <motion.span
-                    initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.9 }}
-                    transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
-                  >
-                    {t.header.tooltipMail}
+                    {mailCopied ? t.header.copied : t.header.tooltipMail}
                   </motion.span>
                 )}
               </AnimatePresence>
@@ -164,7 +176,7 @@ export default function Header() {
               onMouseLeave={() => {
                 if (supportsHover) setHoveredIcon(null);
               }}
-              className='relative flex h-8 w-8 cursor-pointer items-center justify-center overflow-visible rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+              className='relative flex h-8 w-8 cursor-pointer items-center justify-center overflow-visible rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
               style={{ touchAction: 'manipulation' }}
               aria-label={t.header.telefon}
             >
@@ -172,27 +184,31 @@ export default function Header() {
                 icon='streamline-flex:phone-solid'
                 className='h-4 w-4 text-stone-700 dark:text-stone-300'
               />
-              <AnimatePresence>
-                {phoneCopied && (
+              <AnimatePresence mode='wait'>
+                {((phoneCopied &&
+                  (hoveredIcon === 'phone' || hoveredIcon === null)) ||
+                  (supportsHover && hoveredIcon === 'phone')) && (
                   <motion.span
-                    initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                    key={phoneCopied ? 'copied' : 'tooltip'}
+                    initial={{
+                      opacity: 0,
+                      y: 4,
+                      scale: 0.9,
+                      filter: 'blur(4px)',
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      filter: 'blur(0px)',
+                    }}
+                    exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(4px)' }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className='absolute top-full left-1/2 z-50 mt-2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 md:-top-8 md:mt-0 dark:bg-stone-200 dark:text-stone-900'
+                    className={`absolute left-1/2 z-50 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900 ${
+                      phoneCopied ? 'top-full mt-2 md:-top-8 md:mt-0' : '-top-8'
+                    }`}
                   >
-                    {t.header.copied}
-                  </motion.span>
-                )}
-                {!phoneCopied && supportsHover && hoveredIcon === 'phone' && (
-                  <motion.span
-                    initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.9 }}
-                    transition={{ duration: 0.2, ease: 'easeOut' }}
-                    className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
-                  >
-                    {t.header.tooltipPhone}
+                    {phoneCopied ? t.header.copied : t.header.tooltipPhone}
                   </motion.span>
                 )}
               </AnimatePresence>
@@ -203,7 +219,7 @@ export default function Header() {
               rel='noopener noreferrer'
               onMouseEnter={() => setHoveredIcon('cv')}
               onMouseLeave={() => setHoveredIcon(null)}
-              className='relative flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+              className='relative flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
               aria-label='CV'
             >
               <Icon
@@ -213,9 +229,19 @@ export default function Header() {
               <AnimatePresence>
                 {supportsHover && hoveredIcon === 'cv' && (
                   <motion.span
-                    initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                    initial={{
+                      opacity: 0,
+                      y: 4,
+                      scale: 0.9,
+                      filter: 'blur(4px)',
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      filter: 'blur(0px)',
+                    }}
+                    exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(4px)' }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
                   >
@@ -230,7 +256,7 @@ export default function Header() {
               rel='noopener noreferrer'
               onMouseEnter={() => setHoveredIcon('linkedin')}
               onMouseLeave={() => setHoveredIcon(null)}
-              className='relative flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+              className='relative flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
               aria-label='LinkedIn'
             >
               <svg
@@ -265,9 +291,19 @@ export default function Header() {
               <AnimatePresence>
                 {supportsHover && hoveredIcon === 'linkedin' && (
                   <motion.span
-                    initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                    initial={{
+                      opacity: 0,
+                      y: 4,
+                      scale: 0.9,
+                      filter: 'blur(4px)',
+                    }}
+                    animate={{
+                      opacity: 1,
+                      y: 0,
+                      scale: 1,
+                      filter: 'blur(0px)',
+                    }}
+                    exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(4px)' }}
                     transition={{ duration: 0.2, ease: 'easeOut' }}
                     className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
                   >
@@ -296,26 +332,49 @@ export default function Header() {
             }}
             onMouseEnter={() => setHoveredIcon('theme')}
             onMouseLeave={() => setHoveredIcon(null)}
-            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
             aria-label={t.header.tooltipTheme}
           >
-            {theme === 'dark' ? (
-              <Icon
-                icon='streamline-flex:brightness-1-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
-              />
-            ) : (
-              <Icon
-                icon='streamline-flex:dark-dislay-mode-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
-              />
-            )}
+            <AnimatePresence mode='wait'>
+              {theme === 'dark' ? (
+                <motion.div
+                  key='light'
+                  initial={{ opacity: 0, filter: 'blur(4px)' }}
+                  animate={{ opacity: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, filter: 'blur(4px)' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
+                >
+                  <Icon
+                    icon='streamline-flex:brightness-1-solid'
+                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                  />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key='dark'
+                  initial={{ opacity: 0, filter: 'blur(4px)' }}
+                  animate={{ opacity: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, filter: 'blur(4px)' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
+                >
+                  <Icon
+                    icon='streamline-flex:dark-dislay-mode-solid'
+                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
             <AnimatePresence>
               {supportsHover && hoveredIcon === 'theme' && (
                 <motion.span
-                  initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                  initial={{
+                    opacity: 0,
+                    y: 4,
+                    scale: 0.9,
+                    filter: 'blur(4px)',
+                  }}
+                  animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(4px)' }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
                   className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
                 >
@@ -329,18 +388,32 @@ export default function Header() {
             onClick={() => setLanguage(language === 'de' ? 'en' : 'de')}
             onMouseEnter={() => setHoveredIcon('language')}
             onMouseLeave={() => setHoveredIcon(null)}
-            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
             aria-label={t.header.tooltipLanguage}
           >
-            <span className='text-xs font-medium text-stone-700 dark:text-stone-300'>
-              {language === 'de' ? 'EN' : 'DE'}
-            </span>
+            <AnimatePresence mode='wait'>
+              <motion.span
+                key={language}
+                initial={{ opacity: 0, filter: 'blur(2px)' }}
+                animate={{ opacity: 1, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, filter: 'blur(2px)' }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className='text-xs font-medium text-stone-700 dark:text-stone-300'
+              >
+                {language === 'de' ? 'EN' : 'DE'}
+              </motion.span>
+            </AnimatePresence>
             <AnimatePresence>
               {supportsHover && hoveredIcon === 'language' && (
                 <motion.span
-                  initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                  initial={{
+                    opacity: 0,
+                    y: 4,
+                    scale: 0.9,
+                    filter: 'blur(4px)',
+                  }}
+                  animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(4px)' }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
                   className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
                 >

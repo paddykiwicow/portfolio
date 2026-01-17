@@ -67,10 +67,11 @@ export async function POST(request: Request) {
     if (password === CORRECT_PASSWORD) {
       // Cookie serverseitig setzen mit Sicherheits-Flags
       const response = NextResponse.json({ success: true });
+      const isProduction = process.env.NODE_ENV === 'production';
       response.cookies.set('portfolio-auth', 'true', {
         httpOnly: true, // Nicht per JavaScript erreichbar
-        secure: process.env.NODE_ENV === 'production', // Nur über HTTPS in Production
-        sameSite: 'strict', // CSRF-Schutz
+        secure: isProduction, // Nur über HTTPS in Production
+        sameSite: isProduction ? 'strict' : 'lax', // strict in Production, lax in Development
         maxAge: 86400, // 24 Stunden
         path: '/',
       });

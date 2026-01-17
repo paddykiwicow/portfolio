@@ -42,7 +42,11 @@ function VisualRenderer({
           width={0}
           height={0}
           sizes='(max-width: 768px) 100vw, 768px'
-          className={`h-auto w-full ${isHeader ? 'md:rounded-xl' : 'rounded-xl ring-1 ring-stone-200 dark:ring-stone-700'}`}
+          className={`h-auto w-full ${
+            isHeader
+              ? 'shadow-md ring-2 ring-white md:rounded-2xl dark:ring-stone-700'
+              : 'rounded-xl ring-1 ring-stone-200 dark:ring-stone-700'
+          }`}
           unoptimized
         />
       );
@@ -50,7 +54,13 @@ function VisualRenderer({
 
     case 'video':
       visualElement = (
-        <div className='overflow-hidden rounded-xl bg-white ring-1 ring-stone-200 dark:bg-stone-900 dark:ring-stone-700'>
+        <div
+          className={`overflow-hidden rounded-xl bg-white ${
+            isHeader
+              ? 'shadow-md ring-2 ring-white md:rounded-xl dark:ring-stone-700'
+              : 'ring-1 ring-stone-200 dark:ring-stone-700'
+          }`}
+        >
           <video
             src={visual.data.src}
             autoPlay
@@ -81,10 +91,8 @@ function VisualRenderer({
         }
         className={`${
           !isHeader && (visual.type === 'image' || visual.type === 'video')
-            ? 'cursor-pointer transition-all hover:scale-105'
-            : isHeader
-              ? ''
-              : 'transition-all hover:scale-105'
+            ? 'cursor-pointer transition-opacity hover:opacity-90'
+            : ''
         }`}
       >
         {visualElement}
@@ -178,7 +186,7 @@ export default function ProjectTemplate({
       <div className='flex items-start justify-between'>
         <Link
           href='/'
-          className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all hover:-translate-x-1 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+          className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all hover:-translate-x-1 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
           aria-label={t.project.backHome}
         >
           <svg
@@ -217,26 +225,49 @@ export default function ProjectTemplate({
             onMouseLeave={() => {
               if (supportsHover) setHoveredIcon(null);
             }}
-            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
             aria-label={t.header.tooltipTheme}
           >
-            {theme === 'dark' ? (
-              <Icon
-                icon='streamline-flex:brightness-1-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
-              />
-            ) : (
-              <Icon
-                icon='streamline-flex:dark-dislay-mode-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
-              />
-            )}
+            <AnimatePresence mode='wait'>
+              {theme === 'dark' ? (
+                <motion.div
+                  key='light'
+                  initial={{ opacity: 0, filter: 'blur(4px)' }}
+                  animate={{ opacity: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, filter: 'blur(4px)' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
+                >
+                  <Icon
+                    icon='streamline-flex:brightness-1-solid'
+                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                  />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key='dark'
+                  initial={{ opacity: 0, filter: 'blur(4px)' }}
+                  animate={{ opacity: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, filter: 'blur(4px)' }}
+                  transition={{ duration: 0.2, ease: 'easeOut' }}
+                >
+                  <Icon
+                    icon='streamline-flex:dark-dislay-mode-solid'
+                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
             <AnimatePresence>
               {supportsHover && hoveredIcon === 'theme' && (
                 <motion.span
-                  initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                  initial={{
+                    opacity: 0,
+                    y: 4,
+                    scale: 0.9,
+                    filter: 'blur(2px)',
+                  }}
+                  animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(2px)' }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
                   className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
                 >
@@ -254,18 +285,32 @@ export default function ProjectTemplate({
             onMouseLeave={() => {
               if (supportsHover) setHoveredIcon(null);
             }}
-            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
+            className='relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-stone-200/50 transition-all hover:scale-105 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:hover:bg-stone-700/60'
             aria-label={t.header.tooltipLanguage}
           >
-            <span className='text-xs font-medium text-stone-700 dark:text-stone-300'>
-              {language === 'de' ? 'EN' : 'DE'}
-            </span>
+            <AnimatePresence mode='wait'>
+              <motion.span
+                key={language}
+                initial={{ opacity: 0, filter: 'blur(2px)' }}
+                animate={{ opacity: 1, filter: 'blur(0px)' }}
+                exit={{ opacity: 0, filter: 'blur(2px)' }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className='text-xs font-medium text-stone-700 dark:text-stone-300'
+              >
+                {language === 'de' ? 'EN' : 'DE'}
+              </motion.span>
+            </AnimatePresence>
             <AnimatePresence>
               {supportsHover && hoveredIcon === 'language' && (
                 <motion.span
-                  initial={{ opacity: 0, y: 4, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 4, scale: 0.9 }}
+                  initial={{
+                    opacity: 0,
+                    y: 4,
+                    scale: 0.9,
+                    filter: 'blur(2px)',
+                  }}
+                  animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+                  exit={{ opacity: 0, y: 4, scale: 0.9, filter: 'blur(2px)' }}
                   transition={{ duration: 0.2, ease: 'easeOut' }}
                   className='absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-100 dark:bg-stone-200 dark:text-stone-900'
                 >
@@ -303,7 +348,7 @@ export default function ProjectTemplate({
               {t.project.context}
             </h2>
             {Array.isArray(translatedProject.context) ? (
-              <div className='space-y-4 text-stone-900 dark:text-stone-100'>
+              <div className='space-y-4 text-stone-700 dark:text-stone-200'>
                 {translatedProject.context.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -314,7 +359,7 @@ export default function ProjectTemplate({
               </p>
             )}
             {translatedProject.goal && (
-              <p className='mt-4 text-stone-900 dark:text-stone-100'>
+              <p className='mt-4 text-stone-700 dark:text-stone-200'>
                 <span className='font-medium text-stone-900 dark:text-stone-100'>
                   {t.project.goal}
                 </span>{' '}
@@ -329,7 +374,7 @@ export default function ProjectTemplate({
               {t.project.role}
             </h2>
             {Array.isArray(translatedProject.role) ? (
-              <ul className='list-disc space-y-0 pl-5 text-stone-900 marker:text-stone-500 dark:text-stone-100 dark:marker:text-stone-400'>
+              <ul className='list-disc space-y-0 pl-5 text-stone-700 marker:text-stone-500 dark:text-stone-200 dark:marker:text-stone-400'>
                 {translatedProject.role.map((item, index) => {
                   const roleArray = translatedProject.role as string[];
                   return (
@@ -358,7 +403,7 @@ export default function ProjectTemplate({
               {t.project.outcome}
             </h2>
             {Array.isArray(translatedProject.outcome) ? (
-              <ul className='list-disc space-y-0 pl-5 text-stone-900 marker:text-stone-500 dark:text-stone-100 dark:marker:text-stone-400'>
+              <ul className='list-disc space-y-0 pl-5 text-stone-700 marker:text-stone-500 dark:text-stone-200 dark:marker:text-stone-400'>
                 {translatedProject.outcome.map((item, index) => {
                   const outcomeArray = translatedProject.outcome as string[];
                   return (
@@ -387,15 +432,19 @@ export default function ProjectTemplate({
         <section>
           <div className='space-y-12'>
             {remainingVisuals.map((visual, index) => (
-              <VisualRenderer
+              <div
                 key={index + 1}
-                visual={visual}
-                onClick={
-                  visual.type === 'image' || visual.type === 'video'
-                    ? () => openLightbox(index)
-                    : undefined
-                }
-              />
+                className='-mx-4 sm:-mx-8 md:-mx-12 lg:-mx-16'
+              >
+                <VisualRenderer
+                  visual={visual}
+                  onClick={
+                    visual.type === 'image' || visual.type === 'video'
+                      ? () => openLightbox(index)
+                      : undefined
+                  }
+                />
+              </div>
             ))}
           </div>
         </section>
@@ -405,7 +454,7 @@ export default function ProjectTemplate({
         {previousProjectSlug ? (
           <Link
             href={`/projects/${previousProjectSlug}`}
-            className='flex items-center gap-2 rounded-full bg-stone-200/50 px-4 py-2 font-medium text-stone-900 transition-all hover:-translate-x-1 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
+            className='flex items-center gap-2 rounded-full bg-stone-200/50 px-4 py-2 font-medium text-stone-900 transition-all hover:-translate-x-1 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
           >
             <svg
               className='h-4 w-4 text-stone-700 dark:text-stone-300'
@@ -428,7 +477,7 @@ export default function ProjectTemplate({
         {nextProjectSlug && (
           <Link
             href={`/projects/${nextProjectSlug}`}
-            className='flex items-center gap-2 rounded-full bg-stone-200/50 px-4 py-2 font-medium text-stone-900 transition-all hover:translate-x-1 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
+            className='flex items-center gap-2 rounded-full bg-stone-200/50 px-4 py-2 font-medium text-stone-900 transition-all hover:translate-x-1 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
           >
             <span>{t.project.nextProject}</span>
             <svg

@@ -64,7 +64,7 @@ export default function LoginPage() {
           <div className='flex gap-1'>
             <button
               onClick={() => setLanguage('de')}
-              className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
+              className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all active:scale-[0.97] ${
                 language === 'de'
                   ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
                   : 'bg-stone-200/50 text-stone-900 hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
@@ -74,7 +74,7 @@ export default function LoginPage() {
             </button>
             <button
               onClick={() => setLanguage('en')}
-              className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all ${
+              className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition-all active:scale-[0.97] ${
                 language === 'en'
                   ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900'
                   : 'bg-stone-200/50 text-stone-900 hover:scale-105 hover:bg-stone-300/60 dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
@@ -104,7 +104,7 @@ export default function LoginPage() {
             <button
               type='submit'
               disabled={isLoading}
-              className='inline-flex items-center gap-2 rounded-full bg-stone-900 px-4 py-2 font-medium text-stone-100 transition-all hover:translate-x-1 hover:bg-stone-800 disabled:opacity-50 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200'
+              className='inline-flex items-center gap-2 rounded-full bg-stone-900 px-4 py-2 font-medium text-stone-100 transition-all hover:translate-x-1 hover:bg-stone-800 active:scale-[0.97] disabled:opacity-50 dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-stone-200'
             >
               <span>{isLoading ? t.login.checking : t.login.login}</span>
               <svg

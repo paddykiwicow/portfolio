@@ -50,7 +50,7 @@ export default function Home() {
                         width={0}
                         height={0}
                         sizes='112px'
-                        className='h-auto w-full rounded-lg shadow-md ring-2 ring-white transition-transform group-hover:scale-105 group-hover:-rotate-2'
+                        className='h-auto w-full rounded-lg shadow-md ring-2 ring-white transition-transform group-hover:scale-105 group-hover:-rotate-2 dark:ring-stone-700'
                         style={{ objectFit: 'contain' }}
                         unoptimized
                       />
