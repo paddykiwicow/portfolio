@@ -49,7 +49,7 @@ export default function ImpressumPage() {
           aria-label={t.impressum.backToHome}
         >
           <svg
-            className='h-4 w-4 text-stone-700 dark:text-stone-300'
+            className='h-4 w-4 text-stone-600 dark:text-stone-300'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -98,7 +98,7 @@ export default function ImpressumPage() {
                 >
                   <Icon
                     icon='streamline-flex:brightness-1-solid'
-                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                    className='h-4 w-4 text-stone-600 dark:text-stone-300'
                   />
                 </motion.div>
               ) : (
@@ -111,7 +111,7 @@ export default function ImpressumPage() {
                 >
                   <Icon
                     icon='streamline-flex:dark-dislay-mode-solid'
-                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                    className='h-4 w-4 text-stone-600 dark:text-stone-300'
                   />
                 </motion.div>
               )}
@@ -154,7 +154,7 @@ export default function ImpressumPage() {
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, filter: 'blur(2px)' }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className='text-xs font-medium text-stone-700 dark:text-stone-300'
+                className='text-xs font-medium text-stone-600 dark:text-stone-300'
               >
                 {language === 'de' ? 'EN' : 'DE'}
               </motion.span>

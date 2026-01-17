@@ -67,7 +67,7 @@ export default function Home() {
                   <div className='flex-shrink-0'>
                     <div className='flex h-8 w-8 items-center justify-center rounded-full bg-stone-200/50 transition-all group-hover:translate-x-1 group-hover:bg-stone-300/60 dark:bg-stone-800/50 dark:group-hover:bg-stone-700/60'>
                       <svg
-                        className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                        className='h-4 w-4 text-stone-600 dark:text-stone-300'
                         fill='none'
                         viewBox='0 0 24 24'
                         stroke='currentColor'

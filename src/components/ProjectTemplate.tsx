@@ -190,7 +190,7 @@ export default function ProjectTemplate({
           aria-label={t.project.backHome}
         >
           <svg
-            className='h-4 w-4 text-stone-700 dark:text-stone-300'
+            className='h-4 w-4 text-stone-600 dark:text-stone-300'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -239,7 +239,7 @@ export default function ProjectTemplate({
                 >
                   <Icon
                     icon='streamline-flex:brightness-1-solid'
-                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                    className='h-4 w-4 text-stone-600 dark:text-stone-300'
                   />
                 </motion.div>
               ) : (
@@ -252,7 +252,7 @@ export default function ProjectTemplate({
                 >
                   <Icon
                     icon='streamline-flex:dark-dislay-mode-solid'
-                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                    className='h-4 w-4 text-stone-600 dark:text-stone-300'
                   />
                 </motion.div>
               )}
@@ -295,7 +295,7 @@ export default function ProjectTemplate({
                 animate={{ opacity: 1, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, filter: 'blur(2px)' }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className='text-xs font-medium text-stone-700 dark:text-stone-300'
+                className='text-xs font-medium text-stone-600 dark:text-stone-300'
               >
                 {language === 'de' ? 'EN' : 'DE'}
               </motion.span>
@@ -454,7 +454,7 @@ export default function ProjectTemplate({
             className='flex items-center gap-2 rounded-full bg-stone-200/50 px-4 py-2 font-medium text-stone-900 transition-all hover:-translate-x-1 hover:bg-stone-300/60 active:scale-[0.97] dark:bg-stone-800/50 dark:text-stone-100 dark:hover:bg-stone-700/60'
           >
             <svg
-              className='h-4 w-4 text-stone-700 dark:text-stone-300'
+              className='h-4 w-4 text-stone-600 dark:text-stone-300'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'
@@ -478,7 +478,7 @@ export default function ProjectTemplate({
           >
             <span>{t.project.nextProject}</span>
             <svg
-              className='h-4 w-4 text-stone-700 dark:text-stone-300'
+              className='h-4 w-4 text-stone-600 dark:text-stone-300'
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'

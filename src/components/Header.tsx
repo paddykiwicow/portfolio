@@ -132,7 +132,7 @@ export default function Header() {
             >
               <Icon
                 icon='streamline-flex:mail-send-envelope-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                className='h-4 w-4 text-stone-600 dark:text-stone-300'
               />
               <AnimatePresence mode='wait'>
                 {((mailCopied &&
@@ -182,7 +182,7 @@ export default function Header() {
             >
               <Icon
                 icon='streamline-flex:phone-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                className='h-4 w-4 text-stone-600 dark:text-stone-300'
               />
               <AnimatePresence mode='wait'>
                 {((phoneCopied &&
@@ -224,7 +224,7 @@ export default function Header() {
             >
               <Icon
                 icon='streamline-flex:text-file-solid'
-                className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                className='h-4 w-4 text-stone-600 dark:text-stone-300'
               />
               <AnimatePresence>
                 {supportsHover && hoveredIcon === 'cv' && (
@@ -274,7 +274,7 @@ export default function Header() {
                   height='382'
                   rx='16'
                   ry='16'
-                  className='fill-stone-700 dark:fill-stone-700'
+                  className='fill-stone-600 dark:fill-stone-700'
                 />
                 <path
                   fill='#FFFFFF'
@@ -314,7 +314,7 @@ export default function Header() {
             </a>
           </div>
           {/* Pipe Divider */}
-          <div className='h-8 w-px bg-stone-300 dark:bg-stone-700' />
+          <div className='h-6 w-px bg-stone-300 dark:bg-stone-700' />
           {/* Theme Switch */}
           <button
             onClick={() => {
@@ -346,7 +346,7 @@ export default function Header() {
                 >
                   <Icon
                     icon='streamline-flex:brightness-1-solid'
-                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                    className='h-4 w-4 text-stone-600 dark:text-stone-300'
                   />
                 </motion.div>
               ) : (
@@ -359,7 +359,7 @@ export default function Header() {
                 >
                   <Icon
                     icon='streamline-flex:dark-dislay-mode-solid'
-                    className='h-4 w-4 text-stone-700 dark:text-stone-300'
+                    className='h-4 w-4 text-stone-600 dark:text-stone-300'
                   />
                 </motion.div>
               )}
@@ -441,7 +441,18 @@ export default function Header() {
           className='text-stone-700 dark:text-stone-200'
           dangerouslySetInnerHTML={{ __html: t.header.intro1 }}
         />
-        <IntroText2 content={t.header.intro2} />
+        <p
+          className='text-stone-700 dark:text-stone-200'
+          dangerouslySetInnerHTML={{ __html: t.header.intro2 }}
+        />
+        <p
+          className='text-stone-700 dark:text-stone-200'
+          dangerouslySetInnerHTML={{ __html: t.header.intro3 }}
+        />
+        <p
+          className='text-stone-700 dark:text-stone-200'
+          dangerouslySetInnerHTML={{ __html: t.header.intro4 }}
+        />
       </div>
     </header>
   );

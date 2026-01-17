@@ -6,6 +6,8 @@ type Translations = {
       position: string;
       intro1: string;
       intro2: string;
+      intro3: string;
+      intro4: string;
       mail: string;
       telefon: string;
       copied: string;
@@ -112,6 +114,8 @@ type Translations = {
       position: string;
       intro1: string;
       intro2: string;
+      intro3: string;
+      intro4: string;
       mail: string;
       telefon: string;
       copied: string;
@@ -220,9 +224,13 @@ export const translations: Translations = {
     header: {
       position: 'Senior Product Designer',
       intro1:
-        'Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu durchdringen und aufzuräumen. <span class="inline-flex translate-y-[-0.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700">⚙️ Design Systems</span> <span>und</span> <span class="inline-flex translate-y-[-0.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700">🧩 Component Libraries</span> <span>sind mein Steckenpferd</span> – je nerdiger, desto besser.',
+        'Ich liebe es, vor komplexen, gewachsenen Systemen zu sitzen, alles zu durchdringen und aufzuräumen.',
       intro2:
-        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite. <span>Ich designe gerne in <span class="inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700"><svg class="h-3.5 w-3.5" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 300c27.614 0 50-22.386 50-50v-50H50c-27.614 0-50 22.386-50 50s22.386 50 50 50z" fill="#0ACF83"/><path d="M0 150c0-27.614 22.386-50 50-50h50v100H50c-27.614 0-50-22.386-50-50z" fill="#A259FF"/><path d="M0 50C0 22.386 22.386 0 50 0h50v100H50C22.386 100 0 77.614 0 50z" fill="#F24E1E"/><path d="M100 0h50c27.614 0 50 22.386 50 50s-22.386 50-50 50h-50V0z" fill="#FF7262"/><path d="M200 150c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" fill="#1ABCFE"/></svg>Figma</span> , bin aber genauso gerne am Code in <span class="whitespace-nowrap inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700"><img src="/images/CUBE_2D_LIGHT.svg" alt="Cursor" class="h-3.5 w-3.5 dark:hidden" /><img src="/images/CUBE_2D_DARK.svg" alt="Cursor" class="hidden h-3.5 w-3.5 dark:inline-block" />Cursor</span> </span>. Tagelange Design-Sessions sind mir zu zäh. Ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
+        '<span>Design Systems</span> <span>und</span> <span>Component Libraries</span> <span>sind mein Steckenpferd</span> – je nerdiger, desto besser.',
+      intro3:
+        'Am meisten Energie gibt es mir, wenn ich nah mit Development zusammenarbeite.',
+      intro4:
+        '<span>Ich designe gerne in <span class="inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-sm font-medium ring-1 ring-stone-200 dark:bg-stone-800 dark:ring-stone-700"><svg class="h-3.5 w-3.5" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 300c27.614 0 50-22.386 50-50v-50H50c-27.614 0-50 22.386-50 50s22.386 50 50 50z" fill="#0ACF83"/><path d="M0 150c0-27.614 22.386-50 50-50h50v100H50c-27.614 0-50-22.386-50-50z" fill="#A259FF"/><path d="M0 50C0 22.386 22.386 0 50 0h50v100H50C22.386 100 0 77.614 0 50z" fill="#F24E1E"/><path d="M100 0h50c27.614 0 50 22.386 50 50s-22.386 50-50 50h-50V0z" fill="#FF7262"/><path d="M200 150c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" fill="#1ABCFE"/></svg>Figma</span> , bin aber genauso gerne am Code in <span class="whitespace-nowrap inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-sm font-medium ring-1 ring-stone-200 dark:bg-stone-800 dark:ring-stone-700"><img src="/images/CUBE_2D_LIGHT.svg" alt="Cursor" class="h-3.5 w-3.5 dark:hidden" /><img src="/images/CUBE_2D_DARK.svg" alt="Cursor" class="hidden h-3.5 w-3.5 dark:inline-block" />Cursor</span> </span>. Tagelange Design-Sessions sind mir zu zäh. Ich gehe lieber früher ins Prototyping und setze Ideen direkt in Production um.',
       mail: 'Mail',
       telefon: 'Telefon',
       copied: 'Kopiert',
@@ -351,9 +359,12 @@ export const translations: Translations = {
     header: {
       position: 'Senior Product Designer',
       intro1:
-        'I love sitting in front of complex, grown systems, diving deep into everything and cleaning it up. <span class="inline-flex translate-y-[-0.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700">⚙️ Design Systems</span> <span>and</span> <span class="inline-flex translate-y-[-0.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700">🧩 Component Libraries</span> <span>are my thing</span> – the nerdier, the better.',
+        'I love sitting in front of complex, grown systems, diving deep into everything and cleaning it up.',
       intro2:
-        'I get the most energy when I work closely with Development. <span>I like designing in <span class="inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700"><svg class="h-3.5 w-3.5" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 300c27.614 0 50-22.386 50-50v-50H50c-27.614 0-50 22.386-50 50s22.386 50 50 50z" fill="#0ACF83"/><path d="M0 150c0-27.614 22.386-50 50-50h50v100H50c-27.614 0-50-22.386-50-50z" fill="#A259FF"/><path d="M0 50C0 22.386 22.386 0 50 0h50v100H50C22.386 100 0 77.614 0 50z" fill="#F24E1E"/><path d="M100 0h50c27.614 0 50 22.386 50 50s-22.386 50-50 50h-50V0z" fill="#FF7262"/><path d="M200 150c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" fill="#1ABCFE"/></svg>Figma</span> , but I\'m just as happy working with code in <span class="whitespace-nowrap inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-xs font-medium ring-1 ring-stone-300 dark:bg-stone-800 dark:ring-stone-700"><img src="/images/CUBE_2D_LIGHT.svg" alt="Cursor" class="h-3.5 w-3.5 dark:hidden" /><img src="/images/CUBE_2D_DARK.svg" alt="Cursor" class="hidden h-3.5 w-3.5 dark:inline-block" />Cursor</span> </span>. Days-long design sessions are too tedious for me. verI prefer going earlier into prototyping and implementing ideas directly into production.',
+        '<span>Design Systems</span> <span>and</span> <span>Component Libraries</span> <span>are my thing</span> – the nerdier, the better.',
+      intro3: 'I get the most energy when I work closely with Development.',
+      intro4:
+        '<span>I like designing in <span class="inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-sm font-medium ring-1 ring-stone-200 dark:bg-stone-800 dark:ring-stone-700"><svg class="h-3.5 w-3.5" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 300c27.614 0 50-22.386 50-50v-50H50c-27.614 0-50 22.386-50 50s22.386 50 50 50z" fill="#0ACF83"/><path d="M0 150c0-27.614 22.386-50 50-50h50v100H50c-27.614 0-50-22.386-50-50z" fill="#A259FF"/><path d="M0 50C0 22.386 22.386 0 50 0h50v100H50C22.386 100 0 77.614 0 50z" fill="#F24E1E"/><path d="M100 0h50c27.614 0 50 22.386 50 50s-22.386 50-50 50h-50V0z" fill="#FF7262"/><path d="M200 150c0 27.614-22.386 50-50 50s-50-22.386-50-50 22.386-50 50-50 50 22.386 50 50z" fill="#1ABCFE"/></svg>Figma</span> , but I\'m just as happy working with code in <span class="whitespace-nowrap inline-flex translate-y-[1.5px] items-center gap-1 rounded-md px-1.5 py-0.5 text-sm font-medium ring-1 ring-stone-200 dark:bg-stone-800 dark:ring-stone-700"><img src="/images/CUBE_2D_LIGHT.svg" alt="Cursor" class="h-3.5 w-3.5 dark:hidden" /><img src="/images/CUBE_2D_DARK.svg" alt="Cursor" class="hidden h-3.5 w-3.5 dark:inline-block" />Cursor</span> </span>. Days-long design sessions are too tedious for me. I prefer going earlier into prototyping and implementing ideas directly into production.',
       mail: 'Mail',
       telefon: 'Phone',
       copied: 'Copied',

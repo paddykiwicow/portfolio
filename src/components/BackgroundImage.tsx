@@ -20,9 +20,9 @@ const darkMaskStyle = {
 export default function BackgroundImage() {
   return (
     <>
-      {/* Light Mode Background */}
+      {/* Light Mode Background - Currently hidden, remove 'hidden' class to re-enable */}
       <div
-        className='pointer-events-none fixed top-0 left-1/2 z-0 block h-[250px] w-full max-w-4xl -translate-x-1/2 overflow-hidden dark:hidden'
+        className='pointer-events-none fixed top-0 left-1/2 z-0 hidden h-[250px] w-full max-w-4xl -translate-x-1/2 overflow-hidden dark:hidden'
         style={{ top: 'env(safe-area-inset-top, 0px)' }}
       >
         <div className='relative h-full w-full'>
@@ -37,9 +37,9 @@ export default function BackgroundImage() {
           />
         </div>
       </div>
-      {/* Dark Mode Background */}
+      {/* Dark Mode Background - Currently hidden, remove 'hidden' class to re-enable */}
       <div
-        className='pointer-events-none fixed top-0 left-1/2 z-0 hidden h-[250px] w-full max-w-4xl -translate-x-1/2 overflow-hidden dark:block'
+        className='pointer-events-none fixed top-0 left-1/2 z-0 hidden h-[250px] w-full max-w-4xl -translate-x-1/2 overflow-hidden dark:hidden'
         style={{ top: 'env(safe-area-inset-top, 0px)' }}
       >
         <div className='relative h-full w-full'>
