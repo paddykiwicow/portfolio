@@ -62,7 +62,7 @@ export default function RootLayout({
       </head>
       <body>
         <LanguageProvider>
-          <main className='mx-auto max-w-lg px-4 py-10'>
+          <main className='mx-auto max-w-xl px-4 py-10'>
             {children}
             <Footer />
           </main>

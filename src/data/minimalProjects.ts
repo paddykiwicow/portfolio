@@ -2,7 +2,7 @@ import type { MinimalProjectTemplate } from '@/types/project';
 
 export const minimalProjects: MinimalProjectTemplate[] = [
   {
-    title: 'Berufsorientierungs-KI „Abby"',
+    title: 'Berufsorientierungs-KI',
     shortDescription: 'Eine persönliche Begleiterin für die Ausbildungssuche',
     slug: 'abby',
     context: [
@@ -102,7 +102,7 @@ export const minimalProjects: MinimalProjectTemplate[] = [
     ],
     translations: {
       en: {
-        title: 'Career Guidance AI "Abby"',
+        title: 'Career Guidance AI',
         shortDescription: 'A personal companion for apprenticeship search',
         context: [
           'Abby is a personal AI companion that supports young people in career guidance on Ausbildung.de.',

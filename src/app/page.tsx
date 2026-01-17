@@ -40,17 +40,17 @@ export default function Home() {
               <li key={p.title}>
                 <Link
                   href={p.internalPath ?? '/portfolio'}
-                  className='group -mx-3 flex items-center gap-4 rounded-lg p-3 transition-all hover:bg-stone-200/50 dark:hover:bg-stone-800/50'
+                  className='group -mx-3 flex items-center gap-4 rounded-xl p-3 transition-all hover:bg-stone-200/50 dark:hover:bg-stone-800/50'
                 >
                   {p.image && (
-                    <div className='relative w-20 flex-shrink-0'>
+                    <div className='relative w-28 flex-shrink-0'>
                       <Image
                         src={p.image}
                         alt={p.title}
                         width={0}
                         height={0}
-                        sizes='80px'
-                        className='h-auto w-full rounded-md'
+                        sizes='112px'
+                        className='h-auto w-full rounded-lg shadow-md ring-2 ring-white transition-transform group-hover:scale-105 group-hover:-rotate-2'
                         style={{ objectFit: 'contain' }}
                         unoptimized
                       />
