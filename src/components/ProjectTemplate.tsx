@@ -44,8 +44,8 @@ function VisualRenderer({
           sizes='(max-width: 768px) 100vw, 768px'
           className={`h-auto w-full ${
             isHeader
-              ? 'shadow-md ring-2 ring-white md:rounded-2xl dark:ring-stone-700'
-              : 'rounded-xl ring-1 ring-stone-200 dark:ring-stone-700'
+              ? 'md:rounded-2xl md:shadow-md md:ring-2 md:ring-white md:dark:ring-stone-700'
+              : 'rounded-xl shadow-xs ring-1 ring-stone-200 md:rounded-2xl dark:ring-stone-700'
           }`}
           unoptimized
         />
@@ -55,10 +55,10 @@ function VisualRenderer({
     case 'video':
       visualElement = (
         <div
-          className={`overflow-hidden rounded-xl bg-white ${
+          className={`overflow-hidden bg-white ${
             isHeader
-              ? 'shadow-md ring-2 ring-white md:rounded-xl dark:ring-stone-700'
-              : 'ring-1 ring-stone-200 dark:ring-stone-700'
+              ? 'md:rounded-2xl md:shadow-md md:ring-2 md:ring-white md:dark:ring-stone-700'
+              : 'rounded-xl shadow-xs ring-1 ring-stone-200 md:rounded-2xl dark:ring-stone-700'
           }`}
         >
           <video
@@ -432,10 +432,7 @@ export default function ProjectTemplate({
         <section>
           <div className='space-y-12'>
             {remainingVisuals.map((visual, index) => (
-              <div
-                key={index + 1}
-                className='-mx-4 sm:-mx-8 md:-mx-12 lg:-mx-16'
-              >
+              <div key={index + 1} className='md:-mx-12 lg:-mx-16'>
                 <VisualRenderer
                   visual={visual}
                   onClick={
